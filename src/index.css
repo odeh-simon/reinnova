@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'RocknRollOne';
+    src: url('./assets/fonts/RocknRoll_One/RocknRollOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
