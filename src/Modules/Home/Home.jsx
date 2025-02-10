@@ -1,4 +1,3 @@
-import Header from "../../components/Header";
 import NavBar from "../../components/NavBar";
 import { Link } from "react-router-dom";
 import { SubsidiariesCard, SustainabilityCard, WhyChooseUsCard } from "./components/HomeCard";
@@ -8,8 +7,8 @@ import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import GallerySlider from "./components/GallerySlider";
 import Footer from "../../components/Footer";
-import backgroundImage from '../../assets/images/Home images/homeBG.png'
 import { useEffect } from "react";
+import HeaderSlide from "./components/HeaderSlide";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -30,12 +29,7 @@ export default function Home() {
     <div>
       <header>
         <NavBar />
-        <Header
-          showSubscribeButton={false}
-          middleText="Transforming plastic waste into valuable resources."
-          showBouncingArrow={false}
-          backgroundImage={backgroundImage}
-        />
+       <HeaderSlide />
       </header>
 
       {/**Main Contents of the Home page starts Here */}

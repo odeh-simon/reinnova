@@ -95,7 +95,7 @@ export const SubsidiariesCard = () => {
           imageCaption="Manufactures high-quality and innovative packaging solutions using recycled aluminium and sustainable laminate materials for various industries, including pharmaceutical, oral hygiene and body care"
           captionAlign="text-left"
           buttonText="Learn More"
-          onButtonClick={() => navigate("/about-us")}
+          onButtonClick={() => navigate("/green-packaging")}
         />
         <Card
           bgColor="bg-[#E9F9FF]"
@@ -106,7 +106,7 @@ export const SubsidiariesCard = () => {
           imageCaption="Provides a solution for plastic waste by transforming it into valuable resources. They collect plastic waste, meticulously sort it, and reprocess it into high-quality plastic flakes and pellets for use in new products."
           captionAlign="text-left"
           buttonText="Learn More"
-          onButtonClick={() => navigate("/about-us")}
+          onButtonClick={() => navigate("/green-ecoplast")}
         />
         <Card
           bgColor="bg-[#E9F9FF]"
@@ -117,7 +117,7 @@ export const SubsidiariesCard = () => {
           imageCaption="Offers exceptional aluminum roofing solutions while keeping sustainability at the forefront. They utilize recycled aluminum roofing sheets, reducing reliance on virgin materials and  lowering environmental impact."
           captionAlign="text-left"
           buttonText="Learn More"
-          onButtonClick={() => navigate("/about-us")}
+          onButtonClick={() => navigate("/first-aluminium")}
         />
       </div>
     </div>
