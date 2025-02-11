@@ -38,10 +38,10 @@ export default function Contact() {
 
             {/**Form section */}
           <div className="w-full md:w-2/3">
-            <form action="" className="flex flex-col gap-8">
-              <input type="text" placeholder="Your Name" required className="w-full py-6 px-6 bg-[#FCFFFF] border-[0.5px] border-[#7E7E7E] rounded-[10px]"/>
-              <input type="text" placeholder="Your Email" required className="w-full py-6 px-6 bg-[#FCFFFF] border-[0.5px] border-[#7E7E7E] rounded-[10px]"/>
-              <input type="text" placeholder="Your Phone Number" required className="w-full py-6 px-6 bg-[#FCFFFF] border-[0.5px] border-[#7E7E7E] rounded-[10px]"/>
+            <form action="https://formspree.io/f/xeoelgqe" method="POST" className="flex flex-col gap-8">
+              <input type="text" name="fullName" placeholder="Your Name" required className="w-full py-6 px-6 bg-[#FCFFFF] border-[0.5px] border-[#7E7E7E] rounded-[10px]"/>
+              <input type="text" name="email" placeholder="Your Email" required className="w-full py-6 px-6 bg-[#FCFFFF] border-[0.5px] border-[#7E7E7E] rounded-[10px]"/>
+              <input type="text" name="phone" placeholder="Your Phone Number" required className="w-full py-6 px-6 bg-[#FCFFFF] border-[0.5px] border-[#7E7E7E] rounded-[10px]"/>
               <textarea
                 name="message"
                 id="message"

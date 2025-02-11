@@ -8,6 +8,8 @@ import Careers from './Modules/Careers/Careers';
 import BlogList from './Modules/Blog/components/BlogList';
 import BlogDetails from './Modules/Blog/components/BlogDetails';
 import ContactUs from './Modules/Contact';
+import { BlogProvider } from './contexts/BlogContext';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -51,7 +53,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <BlogProvider>
+        <RouterProvider router={router} />
+      </BlogProvider>
     </>
   );
 }

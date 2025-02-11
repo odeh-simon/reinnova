@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import backgroundImage1 from "../../../assets/images/Home images/homeBG.png";
-import backgroundImage2 from "../../../assets/images/Home images/homeBG2.png";
-import backgroundImage3 from "../../../assets/images/Home images/homeBG3.png";
-import backgroundImage4 from "../../../assets/images/Home images/homeBG4.png";
-import backgroundImage5 from "../../../assets/images/Home images/homeBG5.png";
 import { Link } from "react-router-dom";
 import arrow from "../../../assets/icons/arrow-right.svg";
+const backgroundImage1 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295462/homeBG_kkqhtw.png '
+const backgroundImage2 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295466/homeBG2_s7ix7i.png '
+const backgroundImage3 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295471/homeBG3_dehbvr.png '
+const backgroundImage4 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295476/homeBG4_gqr3xz.png '
+const backgroundImage5 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295480/homeBG5_jbq4op.png '
 
 const HeaderSlide = () => {
   const slidesData = [

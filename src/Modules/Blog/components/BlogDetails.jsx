@@ -1,75 +1,111 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
-import blogData from "../components/BlogData";
+import { useContext, useEffect, useState } from 'react';
+import { BlogContext } from '../../../contexts/BlogContext';
+import axios from 'axios';
 import NavBar from "../../../components/NavBar";
 import Contact from '../../../components/Contact';
 import Footer from "../../../components/Footer";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const post = blogData.find((post) => post.id === parseInt(id));
+  const { posts } = useContext(BlogContext);
+  const [postContent, setPostContent] = useState(sessionStorage.getItem(`postContent-${id}`) || '');
+  const [image, setImage] = useState(null);
+  const API_KEY = 'AIzaSyB7cnuZOEEHCKGs3F-RWi5Px8BfbUTc_yg';
+  const blogId = localStorage.getItem('blogId');
 
-    // Scroll to top on component mount
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+   // Scroll to top on component mount
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  if (!post) {
-    return <div>Post not found</div>;
-  }
+  useEffect(() => {
+    setPostContent('');
+    setImage(null);
+
+    const selectedPost = posts.find((post) => post.id === id);
+
+    const extractImageAndContent = (content) => {
+      // Update regex to remove the entire <img> tag and its attributes
+      const imgRegex = /<img[^>]*>/g;
+      const contentWithoutImage = content.replace(imgRegex, ''); // Remove the image tag and its attributes
+      
+      // Extract image if needed (optional)
+      const imgSrcRegex = /<img[^>]+src="([^">]+)"/;
+      const imgMatch = content.match(imgSrcRegex);
+    
+      if (imgMatch && imgMatch[1]) {
+        setImage(imgMatch[1]);
+      }
+    
+      return contentWithoutImage;
+    };
+    
+
+    if (selectedPost) {
+      const contentWithoutImage = extractImageAndContent(selectedPost.content);
+      setPostContent(contentWithoutImage);
+      sessionStorage.setItem(`postContent-${id}`, contentWithoutImage); // Cache the post content without the image
+    } else {
+      const fetchPost = async () => {
+        try {
+          const response = await axios.get(`https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts/${id}?key=${API_KEY}`);
+          const contentWithoutImage = extractImageAndContent(response.data.content);
+          setPostContent(contentWithoutImage);
+          sessionStorage.setItem(`postContent-${id}`, contentWithoutImage); // Cache the post content without the image
+        } catch (error) {
+          console.error('Error fetching post details:', error);
+        }
+      };
+      fetchPost();
+    }
+  }, [id, posts, blogId, API_KEY]);
+
+  const selectedPost = posts.find(post => post.id === id);
 
   return (
     <div className="w-full flex flex-col gap-8">
       <NavBar />
-      <div className="container w-[90%] mx-auto mt-8">
-        {post ? (
+      <div className="container w-[90%] mx-auto mt-8" data-aos="fade-up">
+        {postContent ? (
           <>
-            <h1 className="text-[16px] font-[poppins] font-medium md:text-3xl mb-4">{post.title}</h1>
-            
-            <img src={post.image} alt={post.title} className="w-full h-[252.004px] object-cover mb-8 rounded-[10px]" />
-      
+            <h1 className="text-[16px] font-[poppins] font-medium md:text-3xl mb-4">
+              {selectedPost?.title || 'Title not available'}
+            </h1>
+            {image && (
+              <img 
+                src={image} 
+                alt="Blog post cover" 
+                className="w-full h-[252.004px] object-cover mb-0 md:mb-8 rounded-[2px]" 
+              />
+            )}
             <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-[80px] md:items-start">
               <div className="w-full lg:w-[15%] border-black md:border-t-2 pt-4 flex flex-col gap-3 md:mt-6">
                 <p className="text-[#646976] font-[poppins] text-xs lg:text-sm">written by</p>
-                <p className="text-[#030B1E] font-[poppins] text-xs lg:text-sm font-semibold">{post.author}</p>
-                <p className="text-[#646976] font-[poppins] text-xs lg:text-sm">{post.date}</p>
+                <p className="text-[#030B1E] font-[poppins] text-xs font-semibold">
+                  {selectedPost?.author?.displayName || 'Anonymous'}
+                </p>
+                <p className="text-[#646976] font-[poppins] text-xs lg:text-sm">
+                  {new Date(selectedPost?.published).toLocaleDateString() || ''}
+                </p>
               </div>
               <div className="prose prose-lg max-w-none w-full lg:w-[75%]">
-                {post.content.map((section, index) => {
-                  if (section.type === 'heading') {
-                    return <h2 key={index} className="text-lg font-[poppins] text-[#030B1E] font-semibold mt-6">{section.text}</h2>;
-                  } else if (section.type === 'paragraph') {
-                    return <p key={index} className="mt-4 text-sm font-[poppins] text-[#030B1E]">{section.text}</p>;
-                  } else if (section.type === 'unordered-list') {
-                    return (
-                      <ul key={index} className="list-disc px-4 mt-4">
-                        {section.items.map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                      </ul>
-                    );
-                  }
-                  return null;
-                  
-                })}
-                <p className="text-sm font-[poppins] mt-6 py-4 border-black border-t-2"><Link to={'/about-us'} className="text-[#016E97] font-semibold">Learn more</Link> about Reinnova Green&apos;s sustainable solutions for packaging, plastic waste management, and aluminium products.</p>
-                
+                <div dangerouslySetInnerHTML={{ __html: postContent }} className="prose"></div>
+                <p className="text-sm font-[poppins] mt-6 py-4 border-black border-t-2">
+                  <Link to={'/about-us'} className="text-[#016E97] font-semibold">Learn more </Link>
+                  about Reinnova Green&apos;s sustainable solutions for packaging, plastic waste management, and aluminium products.
+                </p>
               </div>
-               
             </div>
-            
           </>
         ) : (
-          <p>Blog post not found!</p>
+          <p>Loading post...</p>
         )}
+        <div className="mt-8">
+          <Contact />
+        </div>
       </div>
-       {/* contact section */}
-       <div className="w-[90%] mx-auto" data-aos="fade-up">
-        <Contact/>
-       </div>
-
-      {/* footer section */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

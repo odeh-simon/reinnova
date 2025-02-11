@@ -1,16 +1,17 @@
 import Card from "../../../../components/Card";
-import jericans from "../../../../assets/images/Subsidiary images/green ecoplast/jericans.png";
-import cups from "../../../../assets/images/Subsidiary images/green ecoplast/cups.png";
-import chairs from "../../../../assets/images/Subsidiary images/green ecoplast/chairs.png";
-import bottles from "../../../../assets/images/Subsidiary images/green ecoplast/bottles.png";
-import glasses from "../../../../assets/images/Subsidiary images/green ecoplast/glasses.png";
-import globe from "../../../../assets/images/Subsidiary images/green ecoplast/globe.png";
-import bin from "../../../../assets/images/Subsidiary images/green ecoplast/bin.png";
-import openBottles from "../../../../assets/images/Subsidiary images/green ecoplast/open-bottles.png";
-import packOfCans from "../../../../assets/images/Subsidiary images/green ecoplast/pack-of-cans.png";
-import spoons from "../../../../assets/images/Subsidiary images/green ecoplast/spoons.png";
+const bottles = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292833/bottles_ndtasv.png'
+const glasses = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292843/glasses_ds6wrr.png'
+const globe = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292846/globe_xbh2ub.png'
+const bin = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292832/bin_lntzot.png'
+const openBottles = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292853/open-bottles_kg5of4.png'
+const packOfCans = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292857/pack-of-cans_hdl2e5.png'
+const spoons = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292860/spoons_ui0gne.png'
 
 export const RecyclingProducts = () => {
+  const jericans = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292849/jericans_pwixel.png'
+  const cups = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292839/cups_fesexk.png'
+  const chairs = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292836/chairs_qarvtd.png'
+  
   return (
     <>
       <div>
@@ -63,7 +64,7 @@ export const RecyclingProcess = () => {
         <div className="overflow-x-auto">
           <div className="flex gap-[24px]">
             {/* Card 1 */}
-            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4">
+            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 h-[400px]">
               <Card
                 steps="1:"
                 headerText="Plastic Waste Collection"
@@ -78,7 +79,7 @@ export const RecyclingProcess = () => {
             </div>
   
             {/* Card 2 */}
-            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 py-4">
+            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 h-[400px]">
               <Card
                 steps="2:"
                 headerText="Sorting and Segregation"
@@ -93,7 +94,7 @@ export const RecyclingProcess = () => {
             </div>
   
             {/* Card 3 */}
-            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4">
+            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 h-[400px]">
               <Card
                 steps="3:"
                 headerText="Cleaning and Washing"
@@ -108,7 +109,7 @@ export const RecyclingProcess = () => {
             </div>
   
             {/* Card 4 */}
-            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4">
+            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 h-[400px]">
               <Card
                 steps="4:"
                 headerText="Size Reduction"
@@ -123,7 +124,7 @@ export const RecyclingProcess = () => {
             </div>
   
             {/* Card 5 */}
-            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4">
+            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 h-[400px]">
               <Card
                 steps="5:"
                 headerText="Quality Control"

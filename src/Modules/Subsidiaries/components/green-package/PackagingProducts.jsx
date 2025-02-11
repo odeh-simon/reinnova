@@ -1,10 +1,11 @@
-import watermarkBG from '../../../../assets/images/watermarkBG.png';
 import Card from '../../../../components/Card';
-import laminateTube from '../../../../assets/images/Subsidiary images/green packages/laminate-tubes.png';
-import aluminiumTube from '../../../../assets/images/Subsidiary images/green packages/aluminium-tubes.png';
-import seamlessTube from '../../../../assets/images/Subsidiary images/green packages/seamless-tubes.png';
 
 export const PackagingProduct = () => {
+  const seamlessTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292224/seamless-tubes_qlnmlv.png'
+  const aluminiumTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292179/aluminium-tubes_c6yihh.png'
+  const laminateTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292212/laminate-tubes_uv3gc6.png'
+  const watermarkBG = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292675/watermarkBG_asqyuf.png'
+
     return (
       <div className=" w-full px-6 flex flex-col gap-6 mt-14 py-8 bg-center bg-cover" style={{backgroundImage: `url(${watermarkBG})`}}>
         {/* the Subsidiaries Card content goes here */}

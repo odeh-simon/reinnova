@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
-import galleryImage1 from "../../../assets/images/Home images/gallery images/image1.png";
-import galleryImage2 from "../../../assets/images/Home images/gallery images/image2.png";
-import galleryImage3 from "../../../assets/images/Home images/gallery images/image3.png";
-import galleryImage4 from "../../../assets/images/Home images/gallery images/image4.png";
 import backarrow from "../../../assets/icons/backArrow.svg";
 import forwardArrow from "../../../assets/icons/forwardArrow2.svg";
+const galleryImage1 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295931/image1_gxca87.png'
+const galleryImage2 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295935/image2_snough.png'
+const galleryImage3 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295939/image3_gdu0hr.png'
+const galleryImage4 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295944/image4_pu2eij.png'
 
 const images = [
   galleryImage1,

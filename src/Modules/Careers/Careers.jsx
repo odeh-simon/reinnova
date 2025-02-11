@@ -1,15 +1,16 @@
 import {useEffect} from "react";
 import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
-import backgreoundImage from "../../assets/images/Career images/careerBG.png";
-import engineer1 from "../../assets/images/Career images/engineer1.png";
-import engineer2 from "../../assets/images/Career images/engineer2.png";
-import engineer3 from "../../assets/images/Career images/engineer3.png";
 import JobOpenings from "./components/JobOpenings";
 import ApplicationProcess from "./components/ApplicationProcess";
 import Footer from '../../components/Footer';
 
 export default function Careers() {
+  const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291126/careerBG_jikq5r.png'
+  const engineer1 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291400/engineer1_bu0e4r.png'
+  const engineer2 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291575/engineer2_yoavnj.png'
+  const engineer3 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291679/engineer3_u2v91l.png'
+  
   // Scroll to top on component mount
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -24,7 +25,7 @@ export default function Careers() {
           showHomeButtons={false}
           textColor="text-[#016E97]"
           showSubscribeButton={false}
-          backgroundImage={backgreoundImage}
+          backgroundImage={backgroundImage}
           headerText="Reinnova Careers"
           middleText="Build a Rewarding Career at Reinnova Green"
           descriptionText="Welcome to Reinnova Green Holding Company, where a career is more than just a job - it's an opportunity to make a real difference for the environment and the future of Nigeria!"

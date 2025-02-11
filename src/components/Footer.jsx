@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/icons/footer-logo.svg";
 import dotIcon from '../assets/icons/dot-icon-white.svg';
 
-const Footer = () => {
+const Footer = ({ stayConnectedText = "Stay Connected! Subscribe For The Latest Updates" }) => {
   const { pathname } = useLocation();
   const [activeLink, setActiveLink] = useState(pathname);
   const [isSubsidiariesDropDownOpen, setIsSubsidiariesDropDownOpen] = useState(false);
@@ -18,23 +18,35 @@ const Footer = () => {
 
   const currentYear = new Date().getFullYear();
 
+  // newsletter embed code
+  useEffect(() => {
+    const existingScript = document.querySelector('script[data-uid="77f3d4dfec"]');
+
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.setAttribute("data-uid", "77f3d4dfec");
+      script.src = "https://reinnova-green-holdings.kit.com/77f3d4dfec/index.js";
+      document.getElementById("newsletter-embed").appendChild(script);
+    }
+
+    return () => {
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return (
     <footer className="bg-[#016E97] w-full py-6 text-white mt-6">
       {/* Subscribe Section */}
       <div className="w-[90%] mx-auto">
         <div className="flex flex-col items-center">
-          <h2 className="text-[20px] md:text-[30px] text-[#FCFFFF] font-[poppins] font-semibold mb-2 text-center">
-            Stay Connected! Subscribe For The Latest Updates
+          <h2 className="text-[20px] md:text-[30px] text-[#FCFFFF] font-[poppins] font-semibold text-center">
+            {stayConnectedText}
           </h2>
-          <div className="flex flex-col md:flex-row justify-between py-1 px-1.5 rounded-[10px] items-center w-full md:w-[60%] lg:w-[40%] mx-auto bg-white">
-            <input
-              type="email"
-              placeholder="Email"
-              className="p-2 rounded-l-lg text-[#35383F] focus:outline-none w-full md:w-auto"
-            />
-            <button className="bg-[#016E97] text-white px-5 py-3 rounded-[7px] font-medium hover:bg-[#054056] mt-2 md:mt-0">
-              Subscribe
-            </button>
+          {/* subscribe button */}
+          <div id="newsletter-embed" className=" w-full md:w-[70%] mx-auto">
           </div>
         </div>
 

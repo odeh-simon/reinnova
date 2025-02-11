@@ -1,13 +1,14 @@
 import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
 import { useEffect } from "react";
-import backgreoundImage from "../../assets/images/Subsidiary images/firstaluminiumBG.png";
 import Testimonial from "../../components/Testimonial";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 import { AluminiumProcess, AluminiumProducts, BenefitsOfAluminium } from "./components/first-aluminium/AluminiumExports";
 
 export default function FirstAluminium() {
+  const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294318/firstaluminiumBG_ohjrrn.png'
+
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,7 +21,7 @@ export default function FirstAluminium() {
         <Header
           showHomeButtons={false}
           showSubscribeButton={false}
-          backgroundImage={backgreoundImage}
+          backgroundImage={backgroundImage}
           headerText="First Aluminium Nigeria Limited"
           middleText="Powering Progress Through Sustainable Aluminium Solutions"
           descriptionText=" Renowned Aluminium Rolling Mill for Building Products and Industrial Applications"

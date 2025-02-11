@@ -1,4 +1,3 @@
-import React from 'react';
 import step1 from '../../../assets/images/Career images/step1.svg'
 import step2 from '../../../assets/images/Career images/step2.svg'
 import step3 from '../../../assets/images/Career images/step3.svg'

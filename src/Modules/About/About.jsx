@@ -1,12 +1,13 @@
 import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
-import backgroundImage from "../../assets/images/About images/aboutBG.png";
-import missionImage from "../../assets/images/About images/mission.png";
-import visionImage from "../../assets/images/About images/vision.png";
 import Footer from "../../components/Footer";
 import { useEffect } from "react";
 
 export default function About() {
+  const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295202/aboutBG_ov8lgj.png'
+  const missionImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295204/mission_drgkhq.png'
+  const visionImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295210/vision_csltig.png'
+
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -1,6 +1,5 @@
 import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
-import backgreoundImage from "../../assets/images/Subsidiary images/greenpackageBG.png";
 import { PackagingProduct } from "./components/green-package/PackagingProducts";
 import Testimonial from "../../components/Testimonial";
 import Contact from "../../components/Contact";
@@ -8,6 +7,7 @@ import { useEffect } from "react";
 import Footer from "../../components/Footer";
 
 export default function GreenPackaging() {
+  const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292324/greenpackageBG_vb4lyy.png'
    // Scroll to top on component mount
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -21,7 +21,7 @@ export default function GreenPackaging() {
         <Header
           showHomeButtons={false}
           showSubscribeButton={false}
-          backgroundImage={backgreoundImage}
+          backgroundImage={backgroundImage}
           headerText="Reinnova Green Packaging"
           middleText="Sustainable Packaging Solutions for a Greener Future"
           descriptionText="High-Quality Tubes Made with Recycled Aluminium and Sustainable Materials"

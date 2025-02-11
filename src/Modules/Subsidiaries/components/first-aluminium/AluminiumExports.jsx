@@ -1,14 +1,14 @@
 import Card from "../../../../components/Card";
-import constructionImage from '../../../../assets/images/Subsidiary images/first aluminium/construction.png';
-import industrialApplication from '../../../../assets/images/Subsidiary images/first aluminium/industrial-application.png';
-import customSolution from '../../../../assets/images/Subsidiary images/first aluminium/custom-solution.png';
-import corrosion from '../../../../assets/images/Subsidiary images/first aluminium/corrosion.png';
-import maleable from '../../../../assets/images/Subsidiary images/first aluminium/maleable.png';
-import melting from '../../../../assets/images/Subsidiary images/first aluminium/melting.png';
-import preparation from '../../../../assets/images/Subsidiary images/first aluminium/preparation.png';
-import profiles from '../../../../assets/images/Subsidiary images/first aluminium/profiles.png';
-import sustainable from '../../../../assets/images/Subsidiary images/first aluminium/sustainable.png';
-import tube from '../../../../assets/images/Subsidiary images/first aluminium/tube.png';
+const constructionImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294344/construction_iq9xm4.png'
+const industrialApplication = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294357/industrial-application_yatmgz.png'
+const customSolution = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294353/custom-solution_cpn8ks.png'
+const corrosion = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294348/corrosion_tpzfrg.png'
+const maleable = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294361/maleable_lclovg.png'
+const melting = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294365/melting_k7hlww.png'
+const preparation = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294369/preparation_cdmzlh.png'
+const profiles = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294373/profiles_v8vuer.png'
+const sustainable = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294377/sustainable_mmvjbh.png'
+const tube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294382/tube_heupct.png'
 
 export const AluminiumProducts = () => {
   return (
@@ -78,7 +78,7 @@ export const AluminiumProcess = () => {
             </div>
   
             {/* Card 2 */}
-            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 py-4">
+            <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 pb-4">
               <Card
                 steps="2:"
                 headerText="Aluminium Preparation"

@@ -5,11 +5,11 @@ import recycleIcon from "../../../assets/icons/Home Icons/recycle-icon.svg";
 import bottleIcon from "../../../assets/icons/Home Icons/bottle-icon.svg";
 import trashIcon from "../../../assets/icons/Home Icons/trash-icon.svg";
 import roofIcon from "../../../assets/icons/Home Icons/roof-icon.svg";
-import toothbrush from "../../../assets/images/Home images/toothbrush.png";
-import spoons from "../../../assets/images/Home images/spoons.png";
-import aluminium from "../../../assets/images/Home images/aluminium.png";
-import watermarkBG from '../../../assets/images/watermarkBG.png'
 import { useNavigate } from "react-router-dom";
+const toothbrush = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295489/toothbrush_hy1tud.png'
+const spoons = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295484/spoons_kloz9x.png'
+const aluminium = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295456/aluminium_oozww1.png'
+const watermarkBG = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292675/watermarkBG_asqyuf.png'
 
 export const SustainabilityCard = () => {
   return (

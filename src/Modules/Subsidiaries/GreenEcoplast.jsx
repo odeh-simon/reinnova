@@ -1,7 +1,6 @@
 import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
 import { useEffect } from "react";
-import backgreoundImage from "../../assets/images/Subsidiary images/greenecoplastBG.png";
 import {
   BenefitsOfPlasticPackaging,
   RecyclingProcess,
@@ -12,6 +11,8 @@ import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 
 export default function GreenEcoplast() {
+  const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739293106/greenecoplastBG_wubfsg.png'
+
      // Scroll to top on component mount
         useEffect(() => {
           window.scrollTo(0, 0);
@@ -24,7 +25,7 @@ export default function GreenEcoplast() {
         <Header
           showHomeButtons={false}
           showSubscribeButton={false}
-          backgroundImage={backgreoundImage}
+          backgroundImage={backgroundImage}
           headerText="Reinnova Green Ecoplast"
           middleText="Transforming Plastic Waste into Valuable Resources"
           descriptionText="Sustainable Plastic Recycling Solutions for a Greener Nigeria"
