@@ -90,7 +90,7 @@ const HeaderSlide = () => {
           >
             {/* Slide content */}
             <div className={`h-full flex flex-col md:w-[80%] mx-auto items-center justify-center`}>
-              <h1 className="text-lg md:text-[32px] px-8 md:px-16 font-[RocknRollOne] text-center mb-4">
+              <h1 className="text-lg md:text-[40px] px-8 md:px-16 font-[RocknRollOne] text-center mb-4">
                 {slide.middleText}
               </h1>
 

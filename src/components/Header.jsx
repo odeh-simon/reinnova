@@ -42,7 +42,7 @@ const Header = ({
     >
       {/* Optional Header Text */}
       {headerText && (
-        <h2 className="text-[16px] md:text-[24px] font-[RocknRollOne] text-center mb-4 underline">
+        <h2 className="text-[16px] md:text-[32px] font-[RocknRollOne] text-center mb-4 underline">
           {headerText}
         </h2>
       )}

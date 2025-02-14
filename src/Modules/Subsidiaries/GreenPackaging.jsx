@@ -24,7 +24,6 @@ export default function GreenPackaging() {
           backgroundImage={backgroundImage}
           headerText="Reinnova Green Packaging"
           middleText="Sustainable Packaging Solutions for a Greener Future"
-          descriptionText="High-Quality Tubes Made with Recycled Aluminium and Sustainable Materials"
         />
       </header>
 
