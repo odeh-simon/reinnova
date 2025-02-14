@@ -51,7 +51,7 @@ export default function Home() {
               industries. Their dedication and expertise are the driving force
               behind our success.
             </p>
-            <Link to='/about-us' className="border border-[#030B1E] rounded-[10px] py-4 px-8 flex justify-center items-center w-[150px] mx-auto">Lear More</Link>
+            <Link to='/about-us' className="border border-[#030B1E] rounded-[10px] py-4 px-8 flex justify-center items-center w-[150px] mx-auto">Learn More</Link>
           </session>
         
           {/*Sustainability Session */}
