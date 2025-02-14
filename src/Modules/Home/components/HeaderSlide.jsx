@@ -52,7 +52,7 @@ const HeaderSlide = () => {
     setTimeout(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
       setIsSliding(false);
-    }, 500); // Transition duration
+    }, 10); // Transition duration
   };
 
   // const handlePrevSlide = () => {
@@ -65,7 +65,7 @@ const HeaderSlide = () => {
   // };
 
   return (
-    <div className="relative flex flex-col items-center w-[100vw] justify-center h-[50vh] md:h-[90vh] text-white overflow-hidden">
+    <div className="relative flex flex-col items-center w-full justify-center h-[50vh] md:h-[90vh] text-white overflow-hidden">
       {/* Slide Wrapper */}
       <div className="relative w-full h-full">
         {slidesData.map((slide, index) => (
@@ -89,8 +89,8 @@ const HeaderSlide = () => {
             }}
           >
             {/* Slide content */}
-            <div className={`h-full flex flex-col items-center justify-center`}>
-              <h1 className="text-lg md:text-[32px] xl:text-[56px] font-[RocknRollOne] text-center mb-4">
+            <div className={`h-full flex flex-col md:w-[80%] mx-auto items-center justify-center`}>
+              <h1 className="text-lg md:text-[32px] px-8 md:px-16 font-[RocknRollOne] text-center mb-4">
                 {slide.middleText}
               </h1>
 
@@ -107,7 +107,7 @@ const HeaderSlide = () => {
                   to="/about-us"
                   className="bg-transparent border-2 border-white flex items-center rounded-[10px] px-3 py-2 md:px-[32px] md:py-3 gap-4"
                 >
-                  <span className="font-[poppins]  font-medium text-lg hover:text-xl transition-all">
+                  <span className="font-[poppins] font-medium text-lg hover:text-xl transition-all">
                     Learn More{" "}
                   </span>
                   <img src={arrow} alt="arrow" />

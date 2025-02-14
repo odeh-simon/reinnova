@@ -1,15 +1,19 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from "./Modules/Home/Home";
-import About from './Modules/About/About';
-import GreenPackaging from './Modules/Subsidiaries/GreenPackaging';
-import GreenEcoplast from './Modules/Subsidiaries/GreenEcoplast';
-import FirstAluminium from './Modules/Subsidiaries/FirstAluminium';
-import Careers from './Modules/Careers/Careers';
-import BlogList from './Modules/Blog/components/BlogList';
-import BlogDetails from './Modules/Blog/components/BlogDetails';
-import ContactUs from './Modules/Contact';
+import { Suspense, lazy } from 'react';
 import { BlogProvider } from './contexts/BlogContext';
 
+// Lazy load the components
+const Home = lazy(() => import('./Modules/Home/Home'));
+const About = lazy(() => import('./Modules/About/About'));
+const GreenPackaging = lazy(() => import('./Modules/Subsidiaries/GreenPackaging'));
+const GreenEcoplast = lazy(() => import('./Modules/Subsidiaries/GreenEcoplast'));
+const FirstAluminium = lazy(() => import('./Modules/Subsidiaries/FirstAluminium'));
+const Careers = lazy(() => import('./Modules/Careers/Careers'));
+const BlogList = lazy(() => import('./Modules/Blog/components/BlogList'));
+const BlogDetails = lazy(() => import('./Modules/Blog/components/BlogDetails'));
+const ContactUs = lazy(() => import('./Modules/Contact'));
+
+// Define your router with lazy-loaded components
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,19 +29,19 @@ const router = createBrowserRouter([
   },
   {
     path: '/green-packaging',
-    element: <GreenPackaging/>
+    element: <GreenPackaging />
   },
   {
     path: '/green-ecoplast',
-    element: <GreenEcoplast/>
+    element: <GreenEcoplast />
   },
   {
     path: '/first-aluminium',
-    element: <FirstAluminium/>
+    element: <FirstAluminium />
   },
   {
     path: '/career',
-    element: <Careers/>
+    element: <Careers />
   },
   {
     path: '/blog',
@@ -47,16 +51,15 @@ const router = createBrowserRouter([
     path: '/blog/:id',
     element: <BlogDetails />
   },
-
 ]);
 
 function App() {
   return (
-    <>
-      <BlogProvider>
+    <BlogProvider>
+      <Suspense fallback={<div>Loading...</div>}>
         <RouterProvider router={router} />
-      </BlogProvider>
-    </>
+      </Suspense>
+    </BlogProvider>
   );
 }
 

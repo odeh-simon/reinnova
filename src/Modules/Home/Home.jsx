@@ -33,8 +33,8 @@ export default function Home() {
       </header>
 
       {/**Main Contents of the Home page starts Here */}
-      <main className="mt-[88px] w-full">
-        <div className="flex flex-col gap-[88px] w-[90%] mx-auto">
+      <main className="mt-[40px] w-full">
+        <div className="flex flex-col gap-[60px] w-[90%] mx-auto">
           
           {/**About Us Section */}
           <session className="flex flex-col gap-4" data-aos="fade-up">
