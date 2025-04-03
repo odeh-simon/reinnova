@@ -5,6 +5,7 @@ import axios from 'axios';
 import NavBar from "../../../components/NavBar";
 import Contact from '../../../components/Contact';
 import Footer from "../../../components/Footer";
+import LoadingSpinner from "../../../components/LoadingSpinner";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -99,7 +100,7 @@ const BlogDetails = () => {
             </div>
           </>
         ) : (
-          <p>Loading post...</p>
+          <LoadingSpinner />
         )}
         <div className="mt-8">
           <Contact />

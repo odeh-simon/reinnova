@@ -183,6 +183,15 @@ function NavBar() {
                 >
                   <Link to="/career">Carrer</Link>
                 </li>
+                <li
+                  className={`lg:inline lg:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
+                    pathname === "/team"
+                      ? "border-b-[7px] border-[#016E97]"
+                      : "border-transparent"
+                  } `}
+                >
+                  <Link to="/team">Team</Link>
+                </li>
               </ul>
               <div className="w-[50%] mt-4">
                 <Button
@@ -195,7 +204,7 @@ function NavBar() {
         </div>
 
         <div className="hidden lg:flex items-center">
-          <ul className="lg:grid grid-flow-col gap-[48px] items-center">
+          <ul className="lg:grid grid-flow-col gap-[30px] items-center">
             <li
               className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px] `}
             >
@@ -309,6 +318,19 @@ function NavBar() {
                   ): null}
                   <Link to="/career">Career</Link>
                   {pathname === "/career" ?(
+                  <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
+                    ): null}
+              </div>
+            </li>
+            <li
+              className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px]  `}
+            >
+              <div className="flex flex-col items-center">
+                  {pathname === "/team" ?(
+                    <img src={dotIcon} alt="" className="text-center w-[10px] h-[10px]"/>
+                  ): null}
+                  <Link to="/team">Team</Link>
+                  {pathname === "/team" ?(
                   <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
                     ): null}
               </div>

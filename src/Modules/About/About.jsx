@@ -97,7 +97,7 @@ export default function About() {
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-up">
             <h2 className="text-sm md:text-lg font-[poppins] text-[#35383F]">
               Today, our group consists of three specialized subsidiaries:
             </h2>
@@ -130,7 +130,7 @@ export default function About() {
           <Divider />
         </div>
 
-        <div
+        <div data-aos="fade-up"
           style={bgImageStyle}
           className="w-full h-[fit] py-8 px-5 lg:py-[50px] lg:px-[60px]"
         >
@@ -186,7 +186,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center w-full">
+      <section className="flex flex-col items-center justify-center w-full" data-aos="fade-up">
         <div className="w-[80%] md:w-[50%] mx-auto my-12">
           <Divider />
         </div>
@@ -203,7 +203,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="w-fit lg:w-[90%] mx-auto border-[4px] border-[#016E97] rounded-[10px] p-4 flex flex-col lg:flex-row items-start lg:items-center gap-4 my-6">
+      <section className="w-fit lg:w-[90%] mx-auto border-[4px] border-[#016E97] rounded-[10px] p-4 flex flex-col lg:flex-row items-start lg:items-center gap-4 my-6" data-aos="fade-up">
         <div className="flex items-center gap-2">
           <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
           <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg"><span className="font-normal">Driving </span>Nigeria&apos;s <span className="text-[#4FAE49]">Green</span> Economy</p>
@@ -218,7 +218,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-6 items-center justify-center my-12">
+      <section className="flex flex-col gap-6 items-center justify-center my-12" data-aos="fade-up">
         <div className="bg-[#016E97] rounded-[7px] px-7 py-2 w-fit">
           <p className="text-sm lg:text-lg font-[poppins] font-semibold text-white">Join Us in Shaping a Greener Tomorrow!</p>
         </div>

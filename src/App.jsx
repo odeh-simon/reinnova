@@ -10,6 +10,7 @@ const GreenPackaging = lazy(() => import('./Modules/Subsidiaries/GreenPackaging'
 const GreenEcoplast = lazy(() => import('./Modules/Subsidiaries/GreenEcoplast'));
 const FirstAluminium = lazy(() => import('./Modules/Subsidiaries/FirstAluminium'));
 const Careers = lazy(() => import('./Modules/Careers/Careers'));
+const Team = lazy(() => import('./Modules/Team/Team'));
 const BlogList = lazy(() => import('./Modules/Blog/components/BlogList'));
 const BlogDetails = lazy(() => import('./Modules/Blog/components/BlogDetails'));
 const ContactUs = lazy(() => import('./Modules/Contact'));
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: '/career',
     element: <Careers />
+  },
+  {
+    path: '/team',
+    element: <Team />
   },
   {
     path: '/blog',
