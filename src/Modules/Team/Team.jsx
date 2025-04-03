@@ -2,10 +2,14 @@ import Header from "../../components/Header";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import TeamCard from "./components/TeamCard";
+import { useEffect } from "react";
 
 export default function Team() {
     const backgroundImage ='https://res.cloudinary.com/dsnz8adqi/image/upload/v1739290570/bg_zq3nvc.png'
-
+      // Scroll to top on component mount
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <div>
         <header>
