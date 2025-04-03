@@ -6,13 +6,34 @@ const galleryImage1 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v173929
 const galleryImage2 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295935/image2_snough.png'
 const galleryImage3 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295939/image3_gdu0hr.png'
 const galleryImage4 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295944/image4_pu2eij.png'
+const galleryImage5 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451899/image5_by9udi.png'
+const galleryImage6 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451900/image6_jt0x8m.png'
+const galleryImage7 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451901/image7_mycvlz.png'
+const galleryImage8 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451902/image8_jembpx.png'
+const galleryImage9 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451902/image9_mvssqo.png'
+const galleryImage10 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451902/image10_etehf3.png'
+const galleryImage11 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451902/image11_vjwbzj.png'
+const galleryImage12 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451901/image12_ysn2vl.png'
+const galleryImage13 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451903/image13_dhjkjn.png'
+const galleryImage14 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451903/image14_oivh0d.png'
+const galleryImage15 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451903/image15_afgs89.png'
 
 const images = [
   galleryImage1,
   galleryImage2,
   galleryImage3,
   galleryImage4,
-  galleryImage2,
+  galleryImage5,
+  galleryImage6,
+  galleryImage7,
+  galleryImage8,
+  galleryImage9,
+  galleryImage10,
+  galleryImage11,
+  galleryImage12,
+  galleryImage13,
+  galleryImage14,
+  galleryImage15,
 ];
 
 const GallerySlider = () => {
@@ -35,7 +56,7 @@ const GallerySlider = () => {
 
   const getVisibleImages = () => {
     let visibleImages = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       visibleImages.push(images[(currentIndex + i) % images.length]);
     }
     return visibleImages;
@@ -59,7 +80,7 @@ const GallerySlider = () => {
           production process
         </p>
       </div>
-      <div className="relative flex justify-center items-center">
+      <div className="relative flex justify-center items-center mx-auto">
         <button
           onClick={handlePrev}
           className="absolute left-0 text-white p-2 transform -translate-x-10 hidden md:inline-block"
@@ -73,7 +94,7 @@ const GallerySlider = () => {
                 key={index}
                 src={image}
                 alt={`Slide ${index}`}
-                className="w-full sm:w-1/3 flex-shrink-0 p-3 object-cover sm:p-6 mb-4"
+                className="w-full sm:w-1/4 flex-shrink-0 p-3 object-cover  mb-4"
               />
             ))}
           </div>
@@ -84,7 +105,7 @@ const GallerySlider = () => {
         >
           <img src={forwardArrow} alt="next" />
         </button>
-        <div className="absolute bottom-0 mb-0 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {/* <div className="absolute bottom-0 mb-0 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {images.map((_, index) => (
             <div
               key={index}
@@ -93,7 +114,7 @@ const GallerySlider = () => {
               } border border-blue-500`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

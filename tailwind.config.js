@@ -15,6 +15,9 @@ export default {
           '3': '12px',
           '6': '24px',
         },
+        boxShadow: {
+          custom: '7px 7px 12px 7px rgba(1, 110, 151, 0.70)',
+        },
       },
     },
     plugins: [],

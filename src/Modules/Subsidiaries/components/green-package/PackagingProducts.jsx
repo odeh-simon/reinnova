@@ -1,9 +1,9 @@
 import Card from '../../../../components/Card';
 
 export const PackagingProduct = () => {
-  const seamlessTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292224/seamless-tubes_qlnmlv.png'
-  const aluminiumTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292179/aluminium-tubes_c6yihh.png'
-  const laminateTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292212/laminate-tubes_uv3gc6.png'
+  const seamlessTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743521013/seamless-tubes_qlnmlv.svg'
+  const aluminiumTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743521588/aluminium-tubes_c6yihh.svg'
+  const laminateTube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743520951/laminate-tubes_uv3gc6.svg'
   const watermarkBG = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292675/watermarkBG_asqyuf.png'
 
     return (
@@ -20,30 +20,30 @@ export const PackagingProduct = () => {
   
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[32px]">
           <Card
-            bgColor="bg-[#E9F9FF]"
+            bgColor="bg-[#FAFEFF]"
             headerText="Laminate Tubes"
             imageSrc={laminateTube}
-            imageWidth="w-full"
+            imageWidth=""
             imageHeight="h-[auto]"
-            imageCaption="We produce high-quality laminate tubes that are both durable and eco-friendly, available in a variety of sizes and designs to suit your unique requirements."
+            imageCaption="Durable, high-quality and eco-friendly Laminate Tubes available in a variety of sizes and designs to suit your unique requirements."
             captionAlign="text-left"
           />
           <Card
-            bgColor="bg-[#E9F9FF]"
+            bgColor="bg-[#FAFEFF]"
             headerText="Aluminum Tubes"
             imageSrc={aluminiumTube}
-            imageWidth="w-full"
+            imageWidth=""
             imageHeight="h-[auto]"
-            imageCaption="We produce high-quality laminate tubes that are both durable and eco-friendly, available in a variety of sizes and designs to suit your unique requirements."
+            imageCaption="Aluminium Tubes thoughtfully crafted in a wide array of shapes, sizes, and finishes, ensuring they meet the diverse needs of your cosmetic products."
             captionAlign="text-left"
           />
           <Card
-            bgColor="bg-[#E9F9FF]"
+            bgColor="bg-[#FAFEFF]"
             headerText="Seamless Tubes"
             imageSrc={seamlessTube}
-            imageWidth="w-full"
+            imageWidth=""
             imageHeight="h-[auto]"
-            imageCaption="We provide seamless tubes designed with high-barrier and tamper-evident features to guarantee the safety and quality of your pharmaceutical products."
+            imageCaption="High-barrier and tamper-evident featured Seamless Tubes designed to guarantee the safety and quality of your pharmaceutical products."
             captionAlign="text-left"
           />
         </div>

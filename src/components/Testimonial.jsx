@@ -9,7 +9,7 @@ const Testimonial = ({ headerText, paragraphText = "400+ Happy Clients can't be 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 4000); // Adjusted interval to 4 seconds
+    }, 6000); // Adjusted interval to 4 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -73,7 +73,7 @@ const Testimonial = ({ headerText, paragraphText = "400+ Happy Clients can't be 
                       {testimonial.name}
                     </h3>
                     <p className="text-xs md:text-[14px] font-[poppins] text-[#35383F]">
-                      {testimonial.role}
+                      {testimonial.role}{" "} <span className="font-semibold">{testimonial.location}</span>
                     </p>
                     <p className="text-[14px] md:text-[16px] text-center font-[poppins] italic text-[#35383F]">
                       {testimonial.feedback}

@@ -1,3 +1,4 @@
+import SocialIcons from '../components/socialIcons';
 
 export default function Contact() {
   return (
@@ -34,6 +35,11 @@ export default function Contact() {
               </strong>{" "}
               +234(0)987654321
             </p>
+
+            {/* social icons */}
+            <div className='mt-4'>
+              <SocialIcons />
+            </div>
           </div>
 
             {/**Form section */}

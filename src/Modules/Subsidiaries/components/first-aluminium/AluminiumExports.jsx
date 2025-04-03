@@ -1,14 +1,17 @@
 import Card from "../../../../components/Card";
+import FirstAluminiunCard from "./FirstAluminiumCard";
+
 const constructionImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294344/construction_iq9xm4.png'
 const industrialApplication = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294357/industrial-application_yatmgz.png'
 const customSolution = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294353/custom-solution_cpn8ks.png'
 const corrosion = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294348/corrosion_tpzfrg.png'
 const maleable = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294361/maleable_lclovg.png'
-const melting = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294365/melting_k7hlww.png'
+const melting = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743650685/melting_k7hlww.png'
 const preparation = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294369/preparation_cdmzlh.png'
 const profiles = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294373/profiles_v8vuer.png'
 const sustainable = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294377/sustainable_mmvjbh.png'
-const tube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739294382/tube_heupct.png'
+const tube = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743650729/tube_heupct.png'
+const printing = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743650746/printing_ldqlzh.png'
 
 export const AluminiumProducts = () => {
   return (
@@ -128,7 +131,7 @@ export const AluminiumProcess = () => {
                 steps="5:"
                 headerText="Decoration and Printing"
                 bgColor="#FAFEFF"
-                imageSrc={tube}
+                imageSrc={printing}
                 imageWidth="w-full"
                 imageHeight="h-auto"
                 imageCaption="Our state-of-the-art printing technology allows for high-quality, printing on the tubes to meet your specific brand requirements."
@@ -193,6 +196,38 @@ export const BenefitsOfAluminium = () => {
               imageCaption="Aluminium naturally forms a protective oxide layer, making it highly resistant to corrosion and ideal for various environmental conditions."
               captionAlign="text-center"
               headerAlign="text-center"
+            />
+          </div>
+        </div>
+      </>
+    );
+  };
+  
+export const WhyFirstAluminium = () => {
+    return (
+      <>
+        <div>
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[30px] mb-8">
+            Why First Aluminium?
+          </h2>
+  
+          {/**Image Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[32px]">
+            <FirstAluminiunCard
+              header = 'Lightweight and Durability'
+              description = 'First Aluminium offers exceptional strength-to-weight ratio, making it ideal for applications requiring both lightweight construction and long-lasting performance.'
+            />
+            <FirstAluminiunCard
+              header = 'Malleable and Formability'
+              description = "First Aluminium's exceptional formability allows it to be shaped into various configurations, making it versatile for diverse applications for different purposes."
+            />
+            <FirstAluminiunCard
+              header = 'Sustainable Choice'
+              description = 'First Aluminium is one of the most recyclable metals globally. We prioritize using recycled aluminium in our production processes minimizing environmental impact.'
+            />
+            <FirstAluminiunCard
+              header = 'Corrosion Resistant'
+              description = 'First Aluminium organically forms a protective oxide layer, making it highly resistant to corrosion and ideal for various environmental conditions.'
             />
           </div>
         </div>

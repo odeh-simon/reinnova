@@ -1,39 +1,57 @@
-import avatar from '../assets/icons/avatar-icon.svg';
+import papilon from '../assets/icons/testimonials/rakesh.svg';
+import leeno from '../assets/icons/testimonials/leeno.svg';
+import dailyNeeds from '../assets/icons/testimonials/daily-needs.svg';
+import scj from '../assets/icons/testimonials/scj.svg';
+import tolaram from '../assets/icons/testimonials/tolaram.svg';
+
 const testimonials = [
     {
       id: 1,
-      avatar: avatar,
-      name: "Yomi Davidson",
-      role: "Country Manager, Coca-Cola PLC",
+      avatar: papilon,
+      name: "Rakesh",
+      role: "Head of Supply Chain, The Papilon Plastics Company Limited.",
+      location: "Sango - Otta, Ogun State,Nigeria",
       feedback:
-        "We were impressed by Reinnova Green's commitment to sustainability and the high quality of their recycled aluminium packaging. Their innovative solutions not only met our needs but also helped us reduce our environmental footprint. The entire process, from initial contact to delivery, was professional and efficient. We highly recommend Reinnova Green to any company seeking sustainable packaging solutions.",
+        "The Quality of their PP/PE material is very high. Their timely fulfilment of our orders means that we constantly have materials and meet customer demand needs.",
     },
 
     {
       id: 2,
-      avatar: avatar,
-      name: "Jane Doe",
-      role: "CEO, Eco Solutions",
+      avatar: leeno,
+      name: "Emmanuel",
+      role: "Manager, Leeno Plastic Company.",
+      location: "Sagamu, Ogun State. Nigeria",
       feedback:
-        "Reinnova Green has been a game-changer for our company. Their sustainable packaging solutions have significantly reduced our carbon footprint. The quality of their products is top-notch, and their customer service is exceptional. We couldn't be happier with our partnership.",
+        "ReInnova Green Ecoplast (Fan Renewable) has become our first choice Plastic PP/PE supply partner due to the quality of their materials and the timeliness of delivery. Unlike other supplies we receive, we do not have issues with the flow of the materials in our machines.",
     },
 
     {
       id: 3,
-      avatar: avatar,
-      name: "John Smith",
-      role: "Operations Manager, GreenTech",
+      avatar: dailyNeeds,
+      name: "Joshua Paul",
+      role: "Client Representative, Daily Needs Industries.",
+      location: "Lagos ,Nigeria",
       feedback:
-        "Working with Reinnova Green has been a pleasure. Their dedication to sustainability and innovation is evident in every aspect of their business. Their recycled aluminium packaging has exceeded our expectations, and we look forward to continuing our collaboration.",
+        "We love working with First Aluminium. Their tubes consistently meet our specs, arrive safely, and are always delivered on time. Their reliable service has strengthened our clients’ confidence in us, and we’re proud to have them as a trusted partner.",
     },
 
     {
       id: 4,
-      avatar: avatar,
-      name: "Emily Johnson",
-      role: "Marketing Director, Clean Earth",
+      avatar: scj,
+      name: "Ehihon Eno Fortune",
+      role: "Client Representative, SC Johnson & Son Nigeria Ltd.",
+      location: "",
       feedback:
-        "Reinnova Green's commitment to the environment is truly inspiring. Their recycled aluminium packaging has not only helped us reduce waste but also improved our brand image. We highly recommend their services to any company looking to make a positive impact on the planet.",
+        "We have 0 issues with our tubes products . Not only do they meet our quality standards, but their delivery and packaging are always done with care. they also meet our production demand needs.:  A key ingredient for the success of our aluminium tubes in the competitive market.",
+    },
+    {
+      id: 5,
+      avatar: tolaram,
+      name: "Nafiu Fiyinfoluwa",
+      role: "Client Representative, Colgate Tolaram.",
+      location: "",
+      feedback:
+        "First Aluminium is one of the best aluminium and laminate tube packaging companies in Nigeria. Their  product consistently meets our standards and arrives safely. Although we’d love more timely deliveries and larger quantities, their quality, professionalism, and commitment to excellence truly stand out.",
     },
   ];
   

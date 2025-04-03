@@ -2,16 +2,23 @@ import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { useEffect } from "react";
+import Divider from "../../components/Divider";
+import bgImage from "../../assets/images/aboutBg.png";
+import SocialIcons from '../../components/socialIcons';
 
 export default function About() {
-  const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295202/aboutBG_ov8lgj.png'
-  const missionImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295204/mission_drgkhq.png'
-  const visionImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295210/vision_csltig.png'
-
+  const backgroundImage =
+    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295202/aboutBG_ov8lgj.png";
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const bgImageStyle = {
+    backgroundImage: `url(${bgImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
 
   return (
     <div>
@@ -27,116 +34,202 @@ export default function About() {
         />
       </header>
 
-      <div className="container mx-auto px-4 lg:px-8 mt-8">
-        <div className="mb-10 flex flex-col gap-3" data-aos="fade-up">
-          <p className="text-[#35383F] font-[poppins] text-xs md:text-sm">
-            Reinnova Green Holding Company is a visionary force for
-            sustainability in Nigeria, established with a singular mission: to
-            empower businesses and individuals to adopt environmentally
-            responsible practices and contribute to a greener future. We achieve
-            this mission through our network of innovative subsidiaries, each
-            dedicated to tackling a specific challenge within the sustainability
-            landscape.
-          </p>
-          <p className="text-[#35383F] font-[poppins] text-xs md:text-sm">
-            Our journey began with a deep concern for the growing environmental
-            issues facing Nigeria and the world. We recognized the urgent need
-            for innovative solutions that promote responsible resource
-            management, minimize waste generation, and create a circular
-            economy. Fueled by this passion for environmental stewardship,
-            Reinnova Green Holding Company was born.
-          </p>
-        </div>
-        <div className="text-center mb-8" data-aos="fade-up">
-          <h2 className="text-sm md:text-xl font-semibold text-[#016E97] font-[poppins]">Our Mission</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start" data-aos="fade-up">
-          {/* Mission Image */}
-          <div>
-            <img
-              src={missionImage}
-              alt="Our Mission"
-              className="w-full rounded-lg h-fit object-cover shadow-lg"
-            />
+      <main className="px-4 lg:px-10 py-8 md:py-12 bg-[#EFF8FA]">
+        <div className="flex flex-col gap-16">
+          <div
+            className="px-6 py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 rounded-[28px] bg-white shadow-custom"
+            data-aos="fade-up"
+          >
+            <h1 className="font-semibold text-[#016E97] text-lg md:text-4xl font-[poppins]">
+              Our Legacy:{" "}
+              <span className="text-[#35383F] font-[RocknRollOne] font-normal text-base md:text-[24px]">
+                A Tradition of Industrial
+              </span>
+            </h1>
+            <p className="text-[#35383F] font-[poppins] text-xs md:text-sm">
+              Our story began in 1959 and rapidly grew to become one of the
+              country&apos;s foremost industrial companies. Over the years, we
+              became a household name, dominating the market with our
+              <span className="font-bold">
+                high-quality aluminium roofing sheets.
+              </span>{" "}
+              By 1992, we were publicly listed with over 12,730 shareholders,
+              cementing our place as an industry giant.
+            </p>
+            <p className="text-[#35383F] font-[poppins] text-xs md:text-sm">
+              As market demands evolved, so did we. Expanding beyond aluminium,
+              we ventured into{" "}
+              <span className="font-bold">packaging solutions,</span>{" "}
+              manufacturing aluminium and laminate tubes for pharmaceutical,
+              homecare, and personal care products. Our clients included leading
+              brands such as
+              <span className="font-bold">
+                SC Johnson, Colgate, Unilever, and Dabur,
+              </span>{" "}
+              solidifying our reputation for world-class quality and innovation.
+            </p>
           </div>
-          {/* Mission Content */}
-          <div>
-            <ul className="list-disc px-3 flex flex-col gap-3">
-              <li className="text-[#030B1E] font-[poppins] text-sm md:text-[16px]">
-                <strong>Empower Sustainable Practices:</strong> We aim to equip
-                businesses and individuals with the tools and knowledge
-                necessary to integrate sustainable practices into their
-                operations and lifestyles.
-              </li>
-              <li className="text-[#030B1E] font-[poppins] text-sm md:text-[16px]">
-                <strong>Minimize Environmental Impact:</strong> Our core mission
-                revolves around reducing the environmental footprint of human
-                activities through responsible resource management and waste
-                reduction strategies.
-              </li>
-              <li className="text-[#030B1E] font-[poppins] text-sm md:text-[16px]">
-                <strong>Foster a Circular Economy:</strong> We envision a
-                circular economy where resources are used efficiently, waste is
-                minimized, and materials are continuously cycled back into
-                productive use.
-              </li>
-              <li className="text-[#030B1E] font-[poppins] text-sm md:text-[16px]">
-                <strong>Contribute to a Greener Future:</strong> By promoting
-                sustainable practices, we strive to create a lasting positive
-                impact on the environment and ensure a healthy planet for future
-                generations.
-              </li>
-            </ul>
+          <div
+            className="px-6 py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 rounded-[28px] bg-white shadow-custom"
+            data-aos="fade-up"
+          >
+            <h1 className="font-semibold text-[#016E97] text-lg md:text-4xl font-[poppins]">
+              Our Transformation:{" "}
+              <span className="text-[#35383F] font-[RocknRollOne] font-normal text-base md:text-[24px]">
+                Pioneering a Green Revolution
+              </span>
+            </h1>
+            <p className="text-[#35383F] font-[poppins] text-xs md:text-sm">
+              In 2019, recognizing the urgent need for{" "}
+              <span className="font-bold">
+                sustainable industrial solutions,
+              </span>{" "}
+              we pivoted toward{" "}
+              <span className="font-bold">
+                plastic recycling and environmentally friendly manufacturing.
+              </span>{" "}
+              This shift led to the birth of Reinnova Green Holding Company, a
+              dynamic enterprise committed to building a circular economy
+              through{" "}
+              <span className="font-bold">
+                sustainable packaging, recycling, and aluminium solutions.
+              </span>
+            </p>
           </div>
-        </div>
-      </div>
 
-      {/* Vision Section */}
-      <div className="container mx-auto px-4 lg:px-8 mt-12">
-        <div className="text-center mb-8" data-aos="fade-up">
-          <h2 className="text-lg md:text-3xl font-semibold text-[#016E97] font-[poppins]">Our Vision</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start" data-aos="fade-up">
-          {/* Vision Content */}
           <div>
-            <ul className="list-disc px-3 space-y-2 text-gray-700">
-              <li className="text-[#030B1E] font-[poppins] text-sm md:text-[16px]">
-                <strong>Leading Sustainability Solutions Provider:</strong> We
-                aspire to become the preeminent provider of sustainable
-                solutions in Nigeria, offering a comprehensive range of services
-                and products that empower others to embrace a greener future.
+            <h2 className="text-sm md:text-lg font-[poppins] text-[#35383F]">
+              Today, our group consists of three specialized subsidiaries:
+            </h2>
+            <ul className="list-disc list-outside ml-5 text-[#35383F] font-[poppins] text-sm md:text-lg flex flex-col gap-5">
+              <li>
+                <strong>ReInnova Green Packaging: </strong>Nigeria&apos;s
+                leading manufacturer of collapsible aluminium tubes, laminate
+                tubes, and seamless plastic packaging for pharmaceuticals, oral
+                hygiene, and homecare industries.
               </li>
-              <li className="text-[#030B1E] font-[poppins] text-sm md:text-[16px]">
-                <strong>Inspiring Sustainability:</strong> We aim to serve as an
-                inspiration for businesses and individuals, encouraging them to
-                adopt sustainable practices and contribute to positive
-                environmental change.
+              <li>
+                <strong>Reinnova Green Ecoplast: </strong>A driving force in
+                plastic recycling, we convert plastic waste into high-quality
+                PET flakes, PP/PE pellets, and HDPE resins, reducing dependence
+                on virgin plastics and promoting sustainability.
               </li>
-              <li className="text-[#030B1E] font-[poppins] text-sm md:text-[16px]">
-                <strong>Thriving Communities in a Healthy Environment:</strong>{" "}
-                Our vision is for a nation where communities can flourish in a
-                clean and healthy environment, free from the detrimental effects
-                of environmental pollution and resource depletion.
-              </li>
-              <li className="text-[#030B1E] font-[poppins] text-sm md:text-[16px]">
-                <strong>Innovation for a Greener Tomorrow: </strong>We believe
-                in the power of innovation to drive progress towards a more
-                sustainable future. Our vision emphasizes continuous research
-                and development to discover new and improved solutions for
-                environmental challenges.
+              <li>
+                <strong>First Aluminium Nigeria Limited: </strong>
+                Our legacy business continues to deliver high-performance
+                aluminium roofing solutions, utilizing recycled aluminium for
+                enhanced durability and environmental impact reduction.
               </li>
             </ul>
           </div>
-          {/* Vision Image */}
+        </div>
+      </main>
+
+      <section className="flex flex-col gap-6 mt-6 lg:gap-12 lg:mt-12 w-full">
+        <div className="w-[90%] md:w-[60%] mx-auto mt-6">
+          <Divider />
+        </div>
+
+        <div
+          style={bgImageStyle}
+          className="w-full h-[fit] py-8 px-5 lg:py-[50px] lg:px-[60px]"
+        >
+          <div className="text-center">
+            <h2 className="text-[#016E97] font-[poppins] text-base md:text-xl font-semibold">
+              Our Future
+            </h2>
+            <h3 className="text-[#35383F] font-[RocknRollOne] text-sm md:text-lg">
+              Engineering a Sustainable Tomorrow
+            </h3>
+          </div>
           <div>
-            <img
-              src={visionImage}
-              alt="Our Vision"
-              className="w-full object-cover rounded-lg shadow-lg"
-            />
+            <p className="text-[#35383F] font-[poppins] text-sm lg:text-[18px] lg:leading-[32px] mt-2">
+              With a{" "}
+              <strong>significant investment in green technologies,</strong>{" "}
+              ReInnova Green is set to become one of{" "}
+              <strong>
+                Africa&apos;s leading and largest sustainable manufacturing
+                enterprises.
+              </strong>
+            </p>
+            <p className="text-[#35383F] font-[RocknRollOne] text-sm md:text-lg mt-12 mb-3">
+              We are focused on:
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <div className="bg-[#4FAE49] p-4 w-fit rounded-tr-[700px] rounded-br-[70px]">
+              <p className="font-[poppins] text-xs lg:text-[18px] text-white lg:leading-[32px]">
+                Expanding our recycling capacity to significantly reduce plastic
+                waste pollution.
+              </p>
+            </div>
+            <div className="bg-[#4FAE49] p-4 w-fit rounded-tr-[700px] rounded-br-[70px]">
+              <p className="font-[poppins] text-xs lg:text-[18px] text-white lg:leading-[32px]">
+                Innovating eco-friendly packaging solutions that support global
+                sustainability goals.
+              </p>
+            </div>
+            <div className="bg-[#4FAE49] p-4 w-fit rounded-tr-[700px] rounded-br-[70px]">
+              <p className="font-[poppins] text-xs lg:text-[18px] text-white lg:leading-[32px]">
+                Enhancing local production capabilities to drive import
+                substitution and industrial growth.
+              </p>
+            </div>
+            <div className="bg-[#4FAE49] p-4 w-fit rounded-tr-[700px] rounded-br-[70px]">
+              <p className="font-[poppins] text-xs lg:text-[18px] text-white lg:leading-[32px]">
+                Strengthening our impact in aluminium manufacturing, ensuring
+                long-term value for the construction industry.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section className="flex flex-col items-center justify-center w-full">
+        <div className="w-[80%] md:w-[50%] mx-auto my-12">
+          <Divider />
+        </div>
+        <p className="text-center w-[80%] md:w-[50%] font-[poppins] text-[#35383F] text-lg md:text-xl lg:text-3xl mb-4">
+          &quot;Through our dedicated subsidiaries and unwavering commitment to these
+          core values, <strong>ReInnova Green Holding Company </strong>strives to be a catalyst
+          for a sustainable future in Nigeria. We invite you to join us on this
+          journey as we work together to create a cleaner, healthier, and more
+          prosperous nation for generations to come.&quot;
+        </p>
+
+        <div className="w-[80%] md:w-[50%] mx-auto my-12">
+          <Divider />
+        </div>
+      </section>
+
+      <section className="w-fit lg:w-[90%] mx-auto border-[4px] border-[#016E97] rounded-[10px] p-4 flex flex-col lg:flex-row items-start lg:items-center gap-4 my-6">
+        <div className="flex items-center gap-2">
+          <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
+          <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg"><span className="font-normal">Driving </span>Nigeria&apos;s <span className="text-[#4FAE49]">Green</span> Economy</p>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
+          <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg"><span className="font-normal">Leading in</span> Sustainable Manufacturing</p>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
+          <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg"><span className="font-normal">Investing in a</span> Circular Future</p>
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-6 items-center justify-center my-12">
+        <div className="bg-[#016E97] rounded-[7px] px-7 py-2 w-fit">
+          <p className="text-sm lg:text-lg font-[poppins] font-semibold text-white">Join Us in Shaping a Greener Tomorrow!</p>
+        </div>
+        <button className="bg-transparent border border-[#0765A5] rounded-[10px] cursor-pointer hover:bg-[#016E97] hover:text-white transition duration-500 py-3 px-7 w-fit text-sm lg:text-lg font-[poppins] font-semibold text-[#0765A5]">
+          Visit Our Story
+        </button>
+        {/* social icons */}
+        <div>
+          <SocialIcons />
+        </div>
+      </section>
 
       <Footer />
     </div>

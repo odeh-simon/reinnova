@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 import logo from "../assets/icons/footer-logo.svg";
 import dotIcon from '../assets/icons/dot-icon-white.svg';
 
@@ -42,7 +43,7 @@ const Footer = ({ stayConnectedText = "Stay Connected! Subscribe For The Latest 
       {/* Subscribe Section */}
       <div className="w-[90%] mx-auto">
         <div className="flex flex-col items-center">
-          <h2 className="text-[20px] md:text-[30px] text-[#FCFFFF] font-[poppins] font-semibold text-center">
+          <h2 className="text-base md:text-[30px] text-[#FCFFFF] font-[poppins] font-semibold text-center md:mb-2">
             {stayConnectedText}
           </h2>
           {/* subscribe button */}
@@ -158,6 +159,9 @@ const Footer = ({ stayConnectedText = "Stay Connected! Subscribe For The Latest 
       </div>
     </footer>
   );
+};
+Footer.propTypes = {
+  stayConnectedText: PropTypes.string,
 };
 
 export default Footer;

@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 
 export default function Careers() {
   const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291126/careerBG_jikq5r.png'
-  const engineer1 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291400/engineer1_bu0e4r.png'
+  const engineer1 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743651075/engineer1_bu0e4r.png'
   const engineer2 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291575/engineer2_yoavnj.png'
   const engineer3 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291679/engineer3_u2v91l.png'
   

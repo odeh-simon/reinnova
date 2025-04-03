@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { BlogProvider } from './contexts/BlogContext';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load the components
 const Home = lazy(() => import('./Modules/Home/Home'));
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <BlogProvider>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSpinner/>}>
         <RouterProvider router={router} />
       </Suspense>
     </BlogProvider>

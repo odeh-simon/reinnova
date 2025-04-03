@@ -6,3 +6,13 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  .shadow-custom {
+    box-shadow: 7px 7px 12px 7px rgba(1, 110, 151, 0.70);
+}
+  .shadow-custom-green {
+    box-shadow: 7px 7px 12px 7px #4FAE49;
+}
+  .shadow-custom-gray {
+    box-shadow: 7px 7px 12px 12px rgba(174, 178, 179, 0.70);
+}

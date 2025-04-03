@@ -14,7 +14,7 @@ const Card = ({
   headerAlign = 'text-center'
 }) => {
   return (
-    <div className={`py-5 flex flex-col px-5 rounded-[10px] h-auto shadow-md ${bgColor}`}>
+    <div className={`py-5 flex flex-col px-4 rounded-[10px] h-auto shadow-md ${bgColor}`}>
       {/* Optional Steps */}
       {steps && (
         <p className="text-xs md:text-sm font-medium text-left">
@@ -31,7 +31,7 @@ const Card = ({
         )}
         {/* Image */}
         <div className={`mx-auto ${imageWidth} ${imageHeight}`}>
-          <img src={imageSrc} alt={imageCaption} className="rounded-[5px]" />
+          <img src={imageSrc} alt={imageCaption} className="" />
         </div>
         {/* Required Image Caption */}
         <p className={`text-[#05232E] text-xs md:text-[14px] font-[poppins] leading-[170%] ${captionAlign} mb-2`}>

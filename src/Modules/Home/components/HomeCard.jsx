@@ -78,10 +78,10 @@ export const SubsidiariesCard = () => {
       {/* the Subsidiaries Card content goes here */}
       <div className="flex flex-col gap-1">
         <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
-          Our Commitment to Sustainability
+          Our Subsidiaries
         </h2>
         <p className="text-center text-[#35383F] text-xs md:text-xl font-[RocknRollOne]">
-          Creating a Greener Future Through Circular Economy Practices
+          Reinnova Green Holding Company is a collective of three subsidiaries, each specializing in a unique area of sustainable product development and resource management
         </p>
       </div>
 

@@ -9,14 +9,16 @@ import {
 import Testimonial from "../../components/Testimonial";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
-
+import { CommitmentToQuality } from "./components/green-ecoplast/EcoplastExports";
+import Divider from "../../components/Divider";
 export default function GreenEcoplast() {
-  const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739293106/greenecoplastBG_wubfsg.png'
+  const backgroundImage =
+    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739293106/greenecoplastBG_wubfsg.png";
 
-     // Scroll to top on component mount
-        useEffect(() => {
-          window.scrollTo(0, 0);
-        }, []);
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="w-full">
@@ -27,31 +29,53 @@ export default function GreenEcoplast() {
           showSubscribeButton={false}
           backgroundImage={backgroundImage}
           headerText="Reinnova Green Ecoplast"
-          middleText="Transforming Plastic Waste into Valuable Resources"
+          middleText="Leading the Future of Sustainable Packaging"
           descriptionText="Sustainable Plastic Recycling Solutions for a Greener Nigeria"
         />
       </header>
 
-      <main className="w-[90%] mx-auto flex flex-col gap-[60px] mt-[80px]">
+      <main className="w-[90%] mx-auto flex flex-col gap-[80px] mt-[80px]">
         {/**About Reinnova Green Packaging */}
-        <section
-          className="flex flex-col gap-5"
-          data-aos="fade-up"
-        >
-          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
-            About Reinnova Green Ecoplast
+        <section className="flex flex-col gap-5" data-aos="fade-up">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px] mb-8">
+            About Us - Reinnova Green Ecoplast
           </h2>
-          <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
-            Reinnova Green Ecoplast, a subsidiary of Reinnova Green Holding
-            Company, is a leading force in sustainable plastic waste management
-            in Nigeria. We are committed to tackling the plastic waste crisis by
-            providing innovative solutions for plastic recycling. Through our
-            state-of-the-art recycling facility, we collect, meticulously sort,
-            and reprocess plastic waste into high-quality plastic flakes and
-            pellets. These reprocessed materials can then be used to manufacture
-            a wide range of new plastic products, reducing reliance on virgin
-            plastic and creating a circular economy for plastic.
-          </p>
+          <div className="px-6 py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 rounded-[28px] bg-white shadow-custom-green mb-6">
+            <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
+              Nigeria generates over 2.5 million tonnes of plastic waste
+              annually, with a growing population of over 220 million people.
+              The need for eco-friendly solutions has never been greater. At
+              <strong> ReInnova Green Ecoplast,</strong> we are turning plastic
+              waste into valuable resources, producing high-quality recycled PET
+              flakes and PP/HDPE pellets for sustainable packaging solutions.
+              <br /> Since divesting from First Aluminium in 2019, we have
+              processed and exported over 25,000 MT of recycled materials to
+              Europe, Asia, and the USA, reducing plastic pollution while
+              meeting global packaging demands
+            </p>
+            <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
+              With our state-of-the-art recycling facility, we have the capacity
+              to crush and process 40 tonnes of PET waste and 20 tonnes of
+              PP/HDPE waste daily, transforming them into premium-grade recycled
+              pellets and flakes. Our advanced polymer sorter ensures the
+              highest level of purity, removing all impurities for consistent
+              quality. Each batch undergoes multiple quality checks,
+              guaranteeing that our products meet the strictest industry
+              standards for both local and international markets
+            </p>
+            <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
+              At <strong>ReInnova Green Ecoplast,</strong> we are not just
+              recycling—we are building the future of green packaging solutions.
+              By providing sustainable, high-quality alternatives to virgin
+              plastic, we help brands reduce their environmental impact while
+              ensuring durability and reliability.
+            </p>
+          </div>
+        </section>
+
+        {/* Commitment to Quality */}
+        <section data-aos="fade-up">
+          <CommitmentToQuality />
         </section>
 
         {/**Our Plastic Recycling Products */}
@@ -69,12 +93,22 @@ export default function GreenEcoplast() {
           <BenefitsOfPlasticPackaging />
         </section>
 
+        {/**Divider */}
+        <section className="w-[96%] md:w-[80%] mx-auto">
+          <Divider />
+        </section>
+
         {/**Testimonial */}
         <section data-aos="fade-up">
           <Testimonial
             headerText="Hear what some of our customer and clients have to say"
             paragraphText=""
           />
+        </section>
+
+        {/**Divider */}
+        <section className="w-[96%] md:w-[80%] mx-auto">
+          <Divider />
         </section>
 
         {/**Contact Us */}
@@ -84,7 +118,7 @@ export default function GreenEcoplast() {
       </main>
 
       {/**Footer Section */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
