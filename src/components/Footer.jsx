@@ -64,7 +64,8 @@ const Footer = ({ stayConnectedText = "Stay Connected! Subscribe For The Latest 
               { name: "home", path: "/" },
               { name: "about", path: "/about-us" },
               { name: "blog", path: "/blog" },
-              { name: "careers", path: "/careers" },
+              { name: "careers", path: "/career" },
+              { name: "team", path: "/team" },
             ].map((link) => (
               <Link
                 key={link.name}
