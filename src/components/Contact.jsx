@@ -2,9 +2,9 @@ import SocialIcons from '../components/socialIcons';
 
 export default function Contact() {
   return (
-    <div className="w-full ">
+    <div className="w-full px-8">
       <div className=" flex flex-col gap-[56px] mb-6">
-        <header>
+        <header className='flex flex-col items-center justify-center'>
           <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[30px] mb-4">
             Reach out to us let&apos;s work together
           </h2>

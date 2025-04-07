@@ -27,20 +27,34 @@ export default function Home() {
   const statsData = [
     {
       number: 2480801,
-      suffix: "",
+      suffix: " kg",
       description: "processed and recycled bottles",
       icon: bottle,
     },
-    { number: 87, suffix: " Million", description: "saved from beaches", icon: savedBottle },
-    { number: 500, suffix: " Jobs", description: "in the circular economy", icon: jobsIcon },
+    {
+      number: 87,
+      suffix: " Million bottles",
+      description: "saved from beaches",
+      icon: savedBottle,
+    },
+    {
+      number: 500,
+      suffix: " Jobs",
+      description: "in the circular economy",
+      icon: jobsIcon,
+    },
     {
       number: "",
       suffix: "SDG ",
       description: "We subscribe to SDG Goals 8, 12 and 13",
       icon: sdg,
     },
-    { number: 43, suffix: "% Females", description: "in our workforce", icon: femaleIcon },
-
+    {
+      number: 43,
+      suffix: "% Females",
+      description: "in our workforce",
+      icon: femaleIcon,
+    },
   ];
 
   useEffect(() => {
@@ -55,30 +69,35 @@ export default function Home() {
       </header>
 
       {/**Main Contents of the Home page starts Here */}
-      <main className="mt-[40px] w-full">
-        <div className="flex flex-col gap-[60px] w-[90%] mx-auto">
+      <main className="mt-[100px] w-full">
+        <div className="flex flex-col gap-[60px] lg:gap-[100px] w-[90%] mx-auto">
           {/**About Us Section */}
           <session className="flex flex-col gap-4" data-aos="fade-up">
             <h1 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
               About Us
             </h1>
             <h2 className="text-center font-semibold text-[#35383F] text-xs md:text-xl font-[RocknRollOne]">
-              Reimagining Sustainability, Engineering the Future   
+              Reimagining Sustainability, Engineering the Future
             </h2>
             <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
-              At <span className="font-bold">ReInnova Green Holding Company,</span> our journey is a testament to
-              resilience, innovation, and an unrelenting commitment to
-              sustainability. From our inception as <span className="font-bold">First Aluminium Nigeria Plc </span>
+              At{" "}
+              <span className="font-bold">ReInnova Green Holding Company,</span>{" "}
+              our journey is a testament to resilience, innovation, and an
+              unrelenting commitment to sustainability. From our inception as{" "}
+              <span className="font-bold">First Aluminium Nigeria Plc </span>
               in 1959, we have evolved through decades of industrial excellence,
-              pioneering advancements in <span className="font-bold">
-                aluminium manufacturing, packaging
-                solutions, and plastic recycling.
-              </span> Today, we stand as a <span className="font-bold">
-                trailblazer
-                in Nigeria&apos;s green economy,
-              </span> leading the charge toward a circular
-              future where materials are repurposed, waste is minimised, and
-              industries are built on sustainable foundations.
+              pioneering advancements in{" "}
+              <span className="font-bold">
+                aluminium manufacturing, packaging solutions, and plastic
+                recycling.
+              </span>{" "}
+              Today, we stand as a{" "}
+              <span className="font-bold">
+                trailblazer in Nigeria&apos;s green economy,
+              </span>{" "}
+              leading the charge toward a circular future where materials are
+              repurposed, waste is minimised, and industries are built on
+              sustainable foundations.
             </p>
             <Link
               to="/about-us"
@@ -94,7 +113,7 @@ export default function Home() {
           </session>
 
           {/**Our Numbers Section */}
-          <session data-aos="fade-up">
+          <session data-aos="fade-up" className="mb-[60px]">
             <StatsComponent statsData={statsData} />
           </session>
         </div>
@@ -104,36 +123,33 @@ export default function Home() {
           <SubsidiariesCard />
         </session>
 
-        <div className="flex flex-col gap-10 w-[90%] mx-auto">
+        <div className="flex flex-col mt-[40px] gap-[60px] w-[90%] mx-auto">
           {/**Why Choose Reinnova Green Section */}
           <session data-aos="fade-up ">
             <WhyChooseUsCard />
           </session>
 
           {/* divider */}
-          <Divider/>
+          <Divider />
 
           {/**Testimonial Section */}
-          <session data-aos="fade-up">
+          <session data-aos="fade-up" className="w-[90%] lg:w-[80%] mx-auto">
             <Testimonial headerText="Testimonials" />
           </session>
 
-           {/* divider */}
-           <Divider/>
+          {/* divider */}
+          <Divider />
 
           {/**Gallery Section */}
           <session data-aos="fade-up">
             <GallerySlider />
           </session>
 
-           {/* divider */}
-           <Divider/>
+          {/* divider */}
+          <Divider />
 
           {/**Contact Us section */}
-          <session
-            className="mb-10 flex flex-col gap-3"
-            data-aos="fade-up"
-          >
+          <session className="mb-[60px] flex flex-col gap-3" data-aos="fade-up">
             <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
               Contact Us
             </h2>

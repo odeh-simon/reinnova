@@ -29,7 +29,7 @@ export default function GreenPackaging() {
         />
       </header>
 
-      <main className="w-full flex flex-col gap-[30px] mt-[80px]">
+      <main className="w-full flex flex-col gap-[40px] md:gap-[60px] mt-[100px]">
         {/**About Reinnova Green Packaging */}
         <section
           className="w-[90%] mx-auto flex flex-col gap-5"
@@ -71,7 +71,7 @@ export default function GreenPackaging() {
         </section>
 
         {/**Our Packaging Products */}
-        <section data-aos="fade-up">
+        <section data-aos="fade-up" className="w-full mx-auto">
           <PackagingProduct />
         </section>
 
@@ -81,7 +81,7 @@ export default function GreenPackaging() {
         </section>
 
         {/* why choose us */}
-        <section className="">
+        <section className="w-[90%] mx-auto">
           <h1 className="text-[#016E97] font-[poppins] text-lg md:text-[40px] font-bold mb-4 text-center">
             Why Choose Us?
           </h1>
@@ -120,7 +120,7 @@ export default function GreenPackaging() {
         </section>
 
         {/**Testimonial */}
-        <section className="w-[90%] mx-auto" data-aos="fade-up">
+        <section className="w-[90%] lg:w-[80%] mx-auto" data-aos="fade-up">
           <Testimonial
             headerText="Hear what some of our customer and clients have to say"
             paragraphText=""
@@ -128,7 +128,7 @@ export default function GreenPackaging() {
         </section>
 
         {/* Divider */}
-        <section className="my-8 w-[96%] md:w-[80%] mx-auto">
+        <section className="w-[96%] md:w-[80%] mx-auto">
           <Divider />
         </section>
 

@@ -7,7 +7,7 @@ export const PackagingProduct = () => {
   const watermarkBG = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292675/watermarkBG_asqyuf.png'
 
     return (
-      <div className=" w-full px-6 flex flex-col gap-6 mt-14 py-8 bg-center bg-cover" style={{backgroundImage: `url(${watermarkBG})`}}>
+      <div className=" w-full px-6 md:px-12 flex flex-col gap-6 mt-14 py-8 bg-center bg-cover" style={{backgroundImage: `url(${watermarkBG})`}}>
         {/* the Subsidiaries Card content goes here */}
         <div className="flex flex-col gap-1">
           <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[30px]">

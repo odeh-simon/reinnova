@@ -61,7 +61,7 @@ const BlogList = () => {
           backgroundImage={backgroundImage}
         />
       </header>
-      <div className="container w-full my-8">
+      <div className="container w-full my-16">
         <div className="grid grid-cols-1 w-[90%] mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
           {posts.map((post) => {
             const { imageUrl, words } = extractContent(post.content);

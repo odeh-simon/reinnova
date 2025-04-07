@@ -21,7 +21,7 @@ export default function Careers() {
       <header>
         <NavBar />
         <Header
-          showBouncingArrow={false}
+          showBouncingArrow={true}
           showHomeButtons={false}
           textColor="text-[#016E97]"
           showSubscribeButton={false}
@@ -32,7 +32,7 @@ export default function Careers() {
         />
       </header>
 
-      <div className="flex flex-col gap-[60px] w-[90%] mx-auto mt-10">
+      <div className="flex flex-col gap-[60px] lg:gap-[80px] w-[90%] mx-auto mt-[100px]">
         <session data-aos="fade-up">
           <h2 className="text-xs md:text-sm font-[poppins] text-[#030B1E]">
             We are a passionate group of companies dedicated to providing

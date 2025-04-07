@@ -64,9 +64,9 @@ export const CommitmentToQuality = () => {
 };
 export const RecyclingProducts = () => {
   const petFlakes =
-    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1743647390/pet-flakes_bd7am4.png";
+    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1744028349/pet-flakes_bd7am4.png";
   const pp =
-    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1743647390/pp_fyabk5.png";
+    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1744028914/pp_fyabk5.png";
   const ldpe =
     "https://res.cloudinary.com/dsnz8adqi/image/upload/v1743647390/ldpe_ufn1bg.png";
 

@@ -9,7 +9,7 @@ const RecyclingCard = ({ header, imageSrc, description }) => {
         </h2>
       </div>
       <div className="w-full bg-white rounded-[10px] border-2 border-[#016E97]">
-        <img className="w-full h-auto object-cover" src={imageSrc} alt={header} />
+        <img className="w-full h-[227px]" src={imageSrc} alt={header} />
       </div>
       <p className="font-[poppins] text-center text-[#030B1E] text-sm md:text-lg">{description}</p>
     </div>

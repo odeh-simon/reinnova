@@ -4,11 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import Button from "./Button";
 import "../components/styles/NavBar.css";
 import { useNavigate } from "react-router-dom";
-import dotIcon from '../assets/icons/dot-icon.svg';
+import dotIcon from "../assets/icons/dot-icon.svg";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [issubsidiariesDropDownOpen, setIsSubsidiariesDropDown] = useState(false);
+  const [issubsidiariesDropDownOpen, setIsSubsidiariesDropDown] =
+    useState(false);
   const { pathname } = useLocation();
 
   const navigate = useNavigate();
@@ -22,17 +23,13 @@ function NavBar() {
     // Close dropdowns when menu is closed
     if (!isMenuOpen) {
       setIsSubsidiariesDropDown(false);
-      
     }
   };
-
- 
 
   // Function to toggle the Projects dropdown state
   const togglesubsidiariesDropDown = () => {
     setIsSubsidiariesDropDown(!issubsidiariesDropDownOpen);
   };
-
 
   // Effect to handle scroll event
   useEffect(() => {
@@ -57,11 +54,11 @@ function NavBar() {
 
   return (
     <div className={`navbar ${isSticky ? "sticky" : ""}`}>
-      <div className="flex justify-between items-center w-[96%] mx-auto h-[6rem] pt-[1rem]">
+      <div className="flex justify-between items-center w-[100%] pr-8 mx-auto h-[6rem] pt-[1rem]">
         <div className="flex items-center">
           <div className="">
             <img
-              className="w-[150px] h-[150px] lg:[300px] lg:h-[300px]"
+              className="w-[150px] h-[150px] lg:w-[350.457px] lg:h-[250.612px]"
               alt="logo"
               src={logo}
             />
@@ -100,7 +97,9 @@ function NavBar() {
               <ul className="flex flex-col gap-4">
                 <li
                   className={`lg:inline lg:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
-                    pathname === "/" ? "border-b-[7px] border-[#016E97]" : "border-transparent"
+                    pathname === "/"
+                      ? "border-b-[7px] border-[#016E97]"
+                      : "border-transparent"
                   } `}
                 >
                   <Link to="/">Home</Link>
@@ -108,7 +107,9 @@ function NavBar() {
 
                 <li
                   className={`lg:inline lg:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
-                    pathname === "/about-us" ? "border-b-[7px] border-[#016E97]" : "border-transparent"
+                    pathname === "/about-us"
+                      ? "border-b-[7px] border-[#016E97]"
+                      : "border-transparent"
                   } `}
                 >
                   <Link to="/about-us">About Us</Link>
@@ -141,7 +142,9 @@ function NavBar() {
                             : "border-transparent"
                         } `}
                       >
-                        <Link to="/green-packaging">Reinnova Green Packaging</Link>
+                        <Link to="/green-packaging">
+                          Reinnova Green Packaging
+                        </Link>
                       </li>
                       <li
                         className={`py-2 px-4 hover:bg-blue-800 font-[poppins] text-[14px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
@@ -150,7 +153,9 @@ function NavBar() {
                             : "border-transparent"
                         } `}
                       >
-                        <Link to="/green-ecoplast">Reinnova Green Ecoplast</Link>
+                        <Link to="/green-ecoplast">
+                          Reinnova Green Ecoplast
+                        </Link>
                       </li>
                       <li
                         className={`py-2 px-4 hover:bg-blue-800 font-[poppins] text-[14px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
@@ -164,7 +169,7 @@ function NavBar() {
                     </ul>
                   )}
                 </li>
-                
+
                 <li
                   className={`lg:inline lg:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
                     pathname === "/blog"
@@ -195,7 +200,7 @@ function NavBar() {
               </ul>
               <div className="w-[50%] mt-4">
                 <Button
-                  label="Contact Us"                  
+                  label="Contact Us"
                   onClick={() => navigate("/contact-us")}
                 />
               </div>
@@ -203,19 +208,23 @@ function NavBar() {
           )}
         </div>
 
-        <div className="hidden lg:flex items-center">
-          <ul className="lg:grid grid-flow-col gap-[30px] items-center">
+        <div className="hidden lg:flex items-center text-sm" >
+          <ul className="lg:grid grid-flow-col gap-[20px] items-center">
             <li
               className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px] `}
             >
               <div className="flex flex-col items-center">
-                  {pathname === "/" ?(
-                    <img src={dotIcon} alt="" className="text-center w-[10px] h-[10px]"/>
-                  ): null}
-                  <Link to="/">Home</Link>
-                  {pathname === "/" ?(
+                {pathname === "/" ? (
+                  <img
+                    src={dotIcon}
+                    alt=""
+                    className="text-center w-[10px] h-[10px]"
+                  />
+                ) : null}
+                <Link to="/">Home</Link>
+                {pathname === "/" ? (
                   <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
-                    ): null}
+                ) : null}
               </div>
             </li>
 
@@ -223,13 +232,17 @@ function NavBar() {
               className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px] `}
             >
               <div className="flex flex-col items-center">
-                  {pathname === "/about-us" ?(
-                    <img src={dotIcon} alt="" className="text-center w-[10px] h-[10px]"/>
-                  ): null}
-                  <Link to="/about-us">About Us</Link>
-                  {pathname === "/about-us" ?(
+                {pathname === "/about-us" ? (
+                  <img
+                    src={dotIcon}
+                    alt=""
+                    className="text-center w-[10px] h-[10px]"
+                  />
+                ) : null}
+                <Link to="/about-us">About Us</Link>
+                {pathname === "/about-us" ? (
                   <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
-                    ): null}
+                ) : null}
               </div>
             </li>
 
@@ -239,11 +252,17 @@ function NavBar() {
               onMouseLeave={() => setIsSubsidiariesDropDown(false)}
             >
               <button className="cursor-pointer flex flex-col items-center">
-                {pathname ==='/green-packaging' || pathname ==='/green-ecoplast' || pathname ==='/first-aluminium' ?(
-                   <img src={dotIcon} alt="" className="text-center w-[10px] h-[10px]"/>
-                  ): null}
+                {pathname === "/green-packaging" ||
+                pathname === "/green-ecoplast" ||
+                pathname === "/first-aluminium" ? (
+                  <img
+                    src={dotIcon}
+                    alt=""
+                    className="text-center w-[10px] h-[10px]"
+                  />
+                ) : null}
                 <div className="flex items-center gap-1">
-                  <span>Our Subsidiaries{" "}</span>
+                  <span>Our Subsidiaries </span>
                   <svg
                     className="inline w-4 h-4 ml-1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -259,9 +278,11 @@ function NavBar() {
                     />
                   </svg>
                 </div>
-                {pathname ==='/green-packaging' || pathname ==='/green-ecoplast' || pathname ==='/first-aluminium' ?(
-                   <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
-                  ): null}
+                {pathname === "/green-packaging" ||
+                pathname === "/green-ecoplast" ||
+                pathname === "/first-aluminium" ? (
+                  <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
+                ) : null}
               </button>
               {issubsidiariesDropDownOpen && (
                 <ul className="absolute top-full left-0 bg-[#DEF6FF] w-32 shadow-lg">
@@ -272,7 +293,9 @@ function NavBar() {
                         : "border-transparent"
                     } `}
                   >
-                    <Link to="/green-packaging" className="hover:text-white">Reinnova Green Packaging</Link>
+                    <Link to="/green-packaging" className="hover:text-white">
+                      Reinnova Green Packaging
+                    </Link>
                   </li>
                   <li
                     className={`py-2 px-4 hover:bg-[#016E97]  font-[poppins] text-[10px] text-black hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
@@ -281,7 +304,9 @@ function NavBar() {
                         : "border-transparent"
                     } `}
                   >
-                    <Link to="/green-ecoplast" className="hover:text-white">Reinnova Green Ecoplast</Link>
+                    <Link to="/green-ecoplast" className="hover:text-white">
+                      Reinnova Green Ecoplast
+                    </Link>
                   </li>
                   <li
                     className={`py-2 px-4 hover:bg-[#016E97]  font-[poppins] text-[10px] text-black hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
@@ -290,7 +315,9 @@ function NavBar() {
                         : "border-transparent"
                     } `}
                   >
-                    <Link to="/first-aluminium" className="hover:text-white">First Aluminium</Link>
+                    <Link to="/first-aluminium" className="hover:text-white">
+                      First Aluminium
+                    </Link>
                   </li>
                 </ul>
               )}
@@ -299,50 +326,62 @@ function NavBar() {
             <li
               className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px]`}
             >
-               <div className="flex flex-col items-center">
-                  {pathname === "/blog" ?(
-                    <img src={dotIcon} alt="" className="text-center w-[10px] h-[10px]"/>
-                  ): null}
-                  <Link to="/blog">Blog</Link>
-                  {pathname === "/blog" ?(
+              <div className="flex flex-col items-center">
+                {pathname === "/blog" ? (
+                  <img
+                    src={dotIcon}
+                    alt=""
+                    className="text-center w-[10px] h-[10px]"
+                  />
+                ) : null}
+                <Link to="/blog">Blog</Link>
+                {pathname === "/blog" ? (
                   <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
-                    ): null}
+                ) : null}
               </div>
             </li>
             <li
               className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px]  `}
             >
               <div className="flex flex-col items-center">
-                  {pathname === "/career" ?(
-                    <img src={dotIcon} alt="" className="text-center w-[10px] h-[10px]"/>
-                  ): null}
-                  <Link to="/career">Career</Link>
-                  {pathname === "/career" ?(
+                {pathname === "/career" ? (
+                  <img
+                    src={dotIcon}
+                    alt=""
+                    className="text-center w-[10px] h-[10px]"
+                  />
+                ) : null}
+                <Link to="/career">Career</Link>
+                {pathname === "/career" ? (
                   <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
-                    ): null}
+                ) : null}
               </div>
             </li>
             <li
               className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px]  `}
             >
               <div className="flex flex-col items-center">
-                  {pathname === "/team" ?(
-                    <img src={dotIcon} alt="" className="text-center w-[10px] h-[10px]"/>
-                  ): null}
-                  <Link to="/team">Team</Link>
-                  {pathname === "/team" ?(
+                {pathname === "/team" ? (
+                  <img
+                    src={dotIcon}
+                    alt=""
+                    className="text-center w-[10px] h-[10px]"
+                  />
+                ) : null}
+                <Link to="/team">Team</Link>
+                {pathname === "/team" ? (
                   <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
-                    ): null}
+                ) : null}
               </div>
             </li>
           </ul>
-        </div>
 
-        <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center pl-4">
             <Button
-                label="Contact Us"
-                onClick={() => navigate("/contact-us")}
+              label="Contact Us"
+              onClick={() => navigate("/contact-us")}
             />
+          </div>
         </div>
       </div>
     </div>

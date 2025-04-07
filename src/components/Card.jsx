@@ -14,7 +14,7 @@ const Card = ({
   headerAlign = 'text-center'
 }) => {
   return (
-    <div className={`py-5 flex flex-col px-4 rounded-[10px] h-auto shadow-md ${bgColor}`}>
+    <div className={`py-5 flex flex-col px-4 rounded-[10px] h-auto shadow-md relative ${bgColor}`}>
       {/* Optional Steps */}
       {steps && (
         <p className="text-xs md:text-sm font-medium text-left">
@@ -30,8 +30,8 @@ const Card = ({
           </h3>
         )}
         {/* Image */}
-        <div className={`mx-auto ${imageWidth} ${imageHeight}`}>
-          <img src={imageSrc} alt={imageCaption} className="" />
+        <div className={`mx-auto flex items-center justify-center ${imageWidth} ${imageHeight}`}>
+          <img src={imageSrc} alt={imageCaption} className="h-full w-full rounded-[10px]" />
         </div>
         {/* Required Image Caption */}
         <p className={`text-[#05232E] text-xs md:text-[14px] font-[poppins] leading-[170%] ${captionAlign} mb-2`}>
@@ -39,7 +39,7 @@ const Card = ({
         </p>
         {/* Optional Button */}
         {buttonText && (
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center">
             <button
               onClick={onButtonClick}
               className="bg-[#016E97] cursor-pointer text-white font-[poppins] font-medium py-3 px-4 rounded-[10px] hover:bg-teal-700"

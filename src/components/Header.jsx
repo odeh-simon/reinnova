@@ -37,7 +37,7 @@ const Header = ({
 
   return (
     <div
-      className={`flex w-full relative flex-col items-center justify-center bg-cover bg-center h-[50vh] md:h-[90vh] px-8 ${textColor}`}
+      className={`flex w-full relative flex-col items-center justify-center bg-cover bg-center h-[50vh] md:h-[90vh] px-8 md:px-12 ${textColor}`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Optional Header Text */}
@@ -48,7 +48,7 @@ const Header = ({
       )}
 
       {/* Required Middle Text */}
-      <h1 className="text-lg md:text-[32px] lg:text-[40px] px-8 md:px-16 font-[RocknRollOne] text-center mb-4">
+      <h1 className="text-lg md:text-[40px] lg:text-[60px] px-8 md:px-10 font-[RocknRollOne] font-semibold text-center mb-4">
         {middleText}
       </h1>
 

@@ -91,7 +91,7 @@ export const SubsidiariesCard = () => {
           headerText="Reinnova Green Packaging"
           imageSrc={toothbrush}
           imageWidth="w-full"
-          imageHeight="h-[auto]"
+          imageHeight="h-[200px]"
           imageCaption="Manufactures high-quality and innovative packaging solutions using recycled aluminium and sustainable laminate materials for various industries, including pharmaceutical, oral hygiene and body care"
           captionAlign="text-left"
           buttonText="Learn More"
@@ -102,7 +102,7 @@ export const SubsidiariesCard = () => {
           headerText="Reinnova Green Ecoplast"
           imageSrc={spoons}
           imageWidth="w-full"
-          imageHeight="h-[auto]"
+          imageHeight="h-[200px]"
           imageCaption="Provides a solution for plastic waste by transforming it into valuable resources. They collect plastic waste, meticulously sort it, and reprocess it into high-quality plastic flakes and pellets for use in new products."
           captionAlign="text-left"
           buttonText="Learn More"
@@ -113,7 +113,7 @@ export const SubsidiariesCard = () => {
           headerText="First Aluminum Nigeria Limited"
           imageSrc={aluminium}
           imageWidth="w-full"
-          imageHeight="h-[auto]"
+          imageHeight="h-[200px]"
           imageCaption="Offers exceptional aluminum roofing solutions while keeping sustainability at the forefront. They utilize recycled aluminum roofing sheets, reducing reliance on virgin materials and  lowering environmental impact."
           captionAlign="text-left"
           buttonText="Learn More"

@@ -2,7 +2,6 @@ import { useParams, Link } from "react-router-dom";
 import { useContext, useEffect, useState } from 'react';
 import { BlogContext } from '../../../contexts/BlogContext';
 import axios from 'axios';
-import NavBar from "../../../components/NavBar";
 import Contact from '../../../components/Contact';
 import Footer from "../../../components/Footer";
 import LoadingSpinner from "../../../components/LoadingSpinner";
@@ -66,7 +65,7 @@ const BlogDetails = () => {
 
   return (
     <div className="w-full flex flex-col gap-8">
-      <NavBar />
+      
       <div className="container w-[90%] mx-auto mt-8" data-aos="fade-up">
         {postContent ? (
           <>
@@ -77,7 +76,7 @@ const BlogDetails = () => {
               <img 
                 src={image} 
                 alt="Blog post cover" 
-                className="w-full h-[252.004px] object-cover mb-0 md:mb-8 rounded-[2px]" 
+                className="w-full h-[350px] mb-0 md:mb-8" 
               />
             )}
             <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-[80px] md:items-start">

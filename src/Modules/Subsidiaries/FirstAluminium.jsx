@@ -35,7 +35,7 @@ export default function FirstAluminium() {
         />
       </header>
 
-      <main className="w-[90%] mx-auto flex flex-col gap-[60px] mt-[80px]">
+      <main className="w-[90%] mx-auto flex flex-col gap-[40px] lg:gap-[80px] mt-[100px]">
         {/**About Reinnova Green Packaging */}
         <section className="flex flex-col gap-5" data-aos="fade-up">
           <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
@@ -110,7 +110,7 @@ export default function FirstAluminium() {
         </section>
 
         {/**Testimonial */}
-        <section data-aos="fade-up">
+        <section data-aos="fade-up" className="w-[90%] lg:w-[80%] mx-auto">
           <Testimonial
             headerText="Hear what some of our customer and clients have to say"
             paragraphText=""

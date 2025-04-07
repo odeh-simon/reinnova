@@ -17,11 +17,11 @@ const StatsComponent = ({ statsData }) => {
             <div>
               <img src={stat.icon} alt="" className='w-auto h-auto'/>
             </div>
-            <h3 className="text-[#030B1E] font-[poppins] text-lg lg:text-[30px] xl:text-[50px] font-medium">
+            <h3 className="text-[#030B1E] font-[poppins] text-lg lg:text-[30px] xl:text-[40px] font-medium">
               {stat.number !== undefined ? stat.number.toLocaleString() : ''}
               {stat.suffix}
             </h3>
-            <p className="text-[#35383F] font-[poppins] text-[12px] md:tex-[18px]">{stat.description}</p>
+            <p className="text-[#35383F] font-[poppins] text-[12px] md:text-[18px]">{stat.description}</p>
           </div>
         ))}
       </div>

@@ -4,7 +4,8 @@ import Footer from "../../components/Footer";
 import { useEffect } from "react";
 import Divider from "../../components/Divider";
 import bgImage from "../../assets/images/aboutBg.png";
-import SocialIcons from '../../components/socialIcons';
+import SocialIcons from "../../components/socialIcons";
+import OurFocus from "./components/OurFocus";
 
 export default function About() {
   const backgroundImage =
@@ -34,8 +35,8 @@ export default function About() {
         />
       </header>
 
-      <main className="px-4 lg:px-10 py-8 md:py-12 bg-[#EFF8FA]">
-        <div className="flex flex-col gap-16">
+      <main className="px-4 lg:px-10 py-[100px] bg-[#EFF8FA]">
+        <div className="flex flex-col gap-[100px]">
           <div
             className="px-6 py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 rounded-[28px] bg-white shadow-custom"
             data-aos="fade-up"
@@ -69,6 +70,7 @@ export default function About() {
               solidifying our reputation for world-class quality and innovation.
             </p>
           </div>
+
           <div
             className="px-6 py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 rounded-[28px] bg-white shadow-custom"
             data-aos="fade-up"
@@ -124,111 +126,111 @@ export default function About() {
           </div>
         </div>
       </main>
+      {/* Second container section */}
+      <section className="flex flex-col gap-10 lg:gap-[100px]">
+        <section className="flex flex-col gap-6 lg:gap-[100px] mt-6 lg:mt-[100px] w-full">
+          <div className="w-[90%] md:w-[60%] mx-auto mt-6">
+            <Divider />
+          </div>
 
-      <section className="flex flex-col gap-6 mt-6 lg:gap-12 lg:mt-12 w-full">
-        <div className="w-[90%] md:w-[60%] mx-auto mt-6">
-          <Divider />
-        </div>
+          <div
+            data-aos="fade-up"
+            style={bgImageStyle}
+            className="w-full h-[fit] py-8 px-5 lg:py-[50px] lg:px-[60px]"
+          >
+            <div className="text-center">
+              <h2 className="text-[#016E97] font-[poppins] text-base md:text-[40px] font-semibold">
+                Our Future
+              </h2>
+              <h3 className="text-[#35383F] font-[RocknRollOne] text-sm md:text-lg">
+                Engineering a Sustainable Tomorrow
+              </h3>
+            </div>
+            <div>
+              <p className="text-[#35383F] font-[poppins] text-sm lg:text-[18px] lg:leading-[32px] mt-2">
+                With a{" "}
+                <strong>significant investment in green technologies,</strong>{" "}
+                ReInnova Green is set to become one of{" "}
+                <strong>
+                  Africa&apos;s leading and largest sustainable manufacturing
+                  enterprises.
+                </strong>
+              </p>
+              <p className="text-[#35383F] font-[RocknRollOne] text-sm md:text-lg mt-12 mb-3">
+                We are focused on:
+              </p>
+            </div>
+            <div className="">
+              <OurFocus />
+            </div>
+          </div>
+        </section>
 
-        <div data-aos="fade-up"
-          style={bgImageStyle}
-          className="w-full h-[fit] py-8 px-5 lg:py-[50px] lg:px-[60px]"
+        <section
+          className="flex flex-col items-center justify-center w-full"
+          data-aos="fade-up"
         >
-          <div className="text-center">
-            <h2 className="text-[#016E97] font-[poppins] text-base md:text-xl font-semibold">
-              Our Future
-            </h2>
-            <h3 className="text-[#35383F] font-[RocknRollOne] text-sm md:text-lg">
-              Engineering a Sustainable Tomorrow
-            </h3>
+          <div className="w-[80%] md:w-[50%] mx-auto mb-10 md:mb-[100px]">
+            <Divider />
           </div>
+          <p className="text-center w-[80%] md:w-[50%] font-[poppins] text-[#35383F] text-lg md:text-xl lg:text-3xl mb-4">
+            &quot;Through our dedicated subsidiaries and unwavering commitment
+            to these core values,{" "}
+            <strong>ReInnova Green Holding Company </strong>strives to be a
+            catalyst for a sustainable future in Nigeria. We invite you to join
+            us on this journey as we work together to create a cleaner,
+            healthier, and more prosperous nation for generations to come.&quot;
+          </p>
+
+          <div className="w-[80%] md:w-[50%] mx-auto mt-10 md:mt-[100px]">
+            <Divider />
+          </div>
+        </section>
+
+        <section
+          className="w-fit lg:w-[90%] mx-auto border-[4px] border-[#016E97] rounded-[10px] p-4 flex flex-col lg:flex-row items-start lg:items-center gap-4"
+          data-aos="fade-up"
+        >
+          <div className="flex items-center gap-2">
+            <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
+            <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg">
+              <span className="font-normal">Driving </span>Nigeria&apos;s{" "}
+              <span className="text-[#4FAE49]">Green</span> Economy
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
+            <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg">
+              <span className="font-normal">Leading in</span> Sustainable
+              Manufacturing
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
+            <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg">
+              <span className="font-normal">Investing in a</span> Circular
+              Future
+            </p>
+          </div>
+        </section>
+
+        <section
+          className="flex flex-col gap-6 items-center justify-center mb-10 md:mb-[100px]"
+          data-aos="fade-up"
+        >
+          <div className="bg-[#016E97] rounded-[7px] px-7 py-2 w-fit">
+            <p className="text-sm lg:text-lg font-[poppins] font-semibold text-white">
+              Join Us in Shaping a Greener Tomorrow!
+            </p>
+          </div>
+          <button className="bg-transparent border border-[#0765A5] rounded-[10px] cursor-pointer hover:bg-[#016E97] hover:text-white transition duration-500 py-3 px-7 w-fit text-sm lg:text-lg font-[poppins] font-semibold text-[#0765A5]">
+            Visit Our Story
+          </button>
+          {/* social icons */}
           <div>
-            <p className="text-[#35383F] font-[poppins] text-sm lg:text-[18px] lg:leading-[32px] mt-2">
-              With a{" "}
-              <strong>significant investment in green technologies,</strong>{" "}
-              ReInnova Green is set to become one of{" "}
-              <strong>
-                Africa&apos;s leading and largest sustainable manufacturing
-                enterprises.
-              </strong>
-            </p>
-            <p className="text-[#35383F] font-[RocknRollOne] text-sm md:text-lg mt-12 mb-3">
-              We are focused on:
-            </p>
+            <SocialIcons />
           </div>
-
-          <div className="flex flex-col gap-4">
-            <div className="bg-[#4FAE49] p-4 w-fit rounded-tr-[700px] rounded-br-[70px]">
-              <p className="font-[poppins] text-xs lg:text-[18px] text-white lg:leading-[32px]">
-                Expanding our recycling capacity to significantly reduce plastic
-                waste pollution.
-              </p>
-            </div>
-            <div className="bg-[#4FAE49] p-4 w-fit rounded-tr-[700px] rounded-br-[70px]">
-              <p className="font-[poppins] text-xs lg:text-[18px] text-white lg:leading-[32px]">
-                Innovating eco-friendly packaging solutions that support global
-                sustainability goals.
-              </p>
-            </div>
-            <div className="bg-[#4FAE49] p-4 w-fit rounded-tr-[700px] rounded-br-[70px]">
-              <p className="font-[poppins] text-xs lg:text-[18px] text-white lg:leading-[32px]">
-                Enhancing local production capabilities to drive import
-                substitution and industrial growth.
-              </p>
-            </div>
-            <div className="bg-[#4FAE49] p-4 w-fit rounded-tr-[700px] rounded-br-[70px]">
-              <p className="font-[poppins] text-xs lg:text-[18px] text-white lg:leading-[32px]">
-                Strengthening our impact in aluminium manufacturing, ensuring
-                long-term value for the construction industry.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex flex-col items-center justify-center w-full" data-aos="fade-up">
-        <div className="w-[80%] md:w-[50%] mx-auto my-12">
-          <Divider />
-        </div>
-        <p className="text-center w-[80%] md:w-[50%] font-[poppins] text-[#35383F] text-lg md:text-xl lg:text-3xl mb-4">
-          &quot;Through our dedicated subsidiaries and unwavering commitment to these
-          core values, <strong>ReInnova Green Holding Company </strong>strives to be a catalyst
-          for a sustainable future in Nigeria. We invite you to join us on this
-          journey as we work together to create a cleaner, healthier, and more
-          prosperous nation for generations to come.&quot;
-        </p>
-
-        <div className="w-[80%] md:w-[50%] mx-auto my-12">
-          <Divider />
-        </div>
-      </section>
-
-      <section className="w-fit lg:w-[90%] mx-auto border-[4px] border-[#016E97] rounded-[10px] p-4 flex flex-col lg:flex-row items-start lg:items-center gap-4 my-6" data-aos="fade-up">
-        <div className="flex items-center gap-2">
-          <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
-          <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg"><span className="font-normal">Driving </span>Nigeria&apos;s <span className="text-[#4FAE49]">Green</span> Economy</p>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
-          <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg"><span className="font-normal">Leading in</span> Sustainable Manufacturing</p>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="w-[20px] h-[20px] rounded-[10px] border-[#4FAE49] bg-[#4FAE49]"></span>
-          <p className="text-[#016E97] font-[poppins] font-semibold text-base xl:text-lg"><span className="font-normal">Investing in a</span> Circular Future</p>
-        </div>
-      </section>
-
-      <section className="flex flex-col gap-6 items-center justify-center my-12" data-aos="fade-up">
-        <div className="bg-[#016E97] rounded-[7px] px-7 py-2 w-fit">
-          <p className="text-sm lg:text-lg font-[poppins] font-semibold text-white">Join Us in Shaping a Greener Tomorrow!</p>
-        </div>
-        <button className="bg-transparent border border-[#0765A5] rounded-[10px] cursor-pointer hover:bg-[#016E97] hover:text-white transition duration-500 py-3 px-7 w-fit text-sm lg:text-lg font-[poppins] font-semibold text-[#0765A5]">
-          Visit Our Story
-        </button>
-        {/* social icons */}
-        <div>
-          <SocialIcons />
-        </div>
+        </section>
       </section>
 
       <Footer />

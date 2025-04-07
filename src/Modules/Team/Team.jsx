@@ -11,7 +11,7 @@ export default function Team() {
         window.scrollTo(0, 0);
       }, []);
   return (
-    <div>
+    <div className="w-full">
         <header>
             <NavBar />
             <Header 
@@ -26,7 +26,7 @@ export default function Team() {
 
         </header>
 
-        <main className="px-4 mt-12">
+        <main className="md:px-4 mt-[100px] w-[90%] mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <TeamCard 
                     imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681333/tosa_oaa7mn.png"
@@ -63,6 +63,26 @@ export default function Team() {
                     imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681332/olowo_ixqc8a.png"
                     name="Olowo Idowu Daniel"
                     role="Laminate Production Manager, ReInnova Green Packaging"
+                />
+                <TeamCard
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1744064981/fred_k3yrf9.png"
+                    name="FREDERICK FAWOHUNRE"
+                    role="Head of Production AND MAINTENANCE , ReInnova Green Holdings"
+                />
+                <TeamCard
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1744064981/tosan_ht1ktp.png"
+                    name="Mbaegbu Tosan Uzoma"
+                    role="Commercial Manager, ReInnova Green Ecoplast"
+                />
+                <TeamCard
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1744064981/faith_x2gwvp.png"
+                    name="Faith Aibor"
+                    role="Group Head Procurement and Administration - Reinnova Green Holdings"
+                />
+                <TeamCard
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1744064981/fatima_rlride.png"
+                    name="Shittu Fatimah Bolanle"
+                    role="Finance Business Partner, Reinnova Green Holdings"
                 />
                 <TeamCard
                     imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681334/soba_akrwuf.png"

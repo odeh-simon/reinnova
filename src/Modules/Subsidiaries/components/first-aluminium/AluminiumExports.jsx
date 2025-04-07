@@ -215,19 +215,19 @@ export const WhyFirstAluminium = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[32px]">
             <FirstAluminiunCard
               header = 'Lightweight and Durability'
-              description = 'First Aluminium offers exceptional strength-to-weight ratio, making it ideal for applications requiring both lightweight construction and long-lasting performance.'
+              description = '<b>First Aluminium</b> offers exceptional strength-to-weight ratio, making it ideal for applications requiring both lightweight construction and long-lasting performance.'
             />
             <FirstAluminiunCard
               header = 'Malleable and Formability'
-              description = "First Aluminium's exceptional formability allows it to be shaped into various configurations, making it versatile for diverse applications for different purposes."
+              description = "<b>First Aluminium's</b> exceptional formability allows it to be shaped into various configurations, making it versatile for diverse applications for different purposes."
             />
             <FirstAluminiunCard
               header = 'Sustainable Choice'
-              description = 'First Aluminium is one of the most recyclable metals globally. We prioritize using recycled aluminium in our production processes minimizing environmental impact.'
+              description = '<b>First Aluminium</b> is one of the most recyclable metals globally. We prioritize using recycled aluminium in our production processes minimizing environmental impact.'
             />
             <FirstAluminiunCard
               header = 'Corrosion Resistant'
-              description = 'First Aluminium organically forms a protective oxide layer, making it highly resistant to corrosion and ideal for various environmental conditions.'
+              description = '<b>First Aluminium</b> organically forms a protective oxide layer, making it highly resistant to corrosion and ideal for various environmental conditions.'
             />
           </div>
         </div>
