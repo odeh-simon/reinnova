@@ -9,7 +9,7 @@ import Divider from "../../components/Divider";
 
 export default function GreenPackaging() {
   const backgroundImage =
-    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1743522475/greenpackageBG_vb4lyy.png";
+    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1745968450/greenpackageBG_vb4lyy.png";
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,16 +29,16 @@ export default function GreenPackaging() {
         />
       </header>
 
-      <main className="w-full flex flex-col gap-[40px] md:gap-[60px] mt-[100px]">
+      <main className="w-full flex flex-col gap-[40px] md:gap-[60px] mt-[50px] lg:mt-[100px]">
         {/**About Reinnova Green Packaging */}
         <section
-          className="w-[90%] mx-auto flex flex-col gap-5"
+          className="w-[90%] lg:w-[80%] lg:px-[100px] mx-auto flex flex-col gap-5"
           data-aos="fade-up"
         >
-          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px]">
             About Us - Reinnova Green Packaging
           </h2>
-          <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
+          <p className="text-[#35383F] font-[poppins] text-sm leading-[32px]">
             <strong>ReInnova Green Packaging,</strong> a subsidiary of ReInnova
             Green Holding Company, is a leading manufacturer of sustainable
             packaging solutions in Nigeria. are committed to delivering
@@ -48,7 +48,7 @@ export default function GreenPackaging() {
             biggest brands, including{" "}
             <strong>Unilever, Dabur, Aspira, SC Johnson, and Colgate.</strong>
           </p>
-          <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
+          <p className="text-[#35383F] font-[poppins] text-sm leading-[32px]">
             Our <strong>Laminate Tube</strong> division operates two
             state-of-the-art machines with a combined production capacity of{" "}
             <strong>400 tubes per minute,</strong>
@@ -56,13 +56,13 @@ export default function GreenPackaging() {
             <strong>89 million tubes.</strong> These tubes are used for
             toothpaste, creams, and personal care products.
           </p>
-          <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
+          <p className="text-[#35383F] font-[poppins] text-sm leading-[32px]">
             On the <strong>Aluminium Tube</strong> side, we run two advanced
             production lines capable of producing{" "}
             <strong>14 million tubes annually,</strong> ensuring high-quality ,
             durable packaging for pharmaceutical ointments and creams{" "}
           </p>
-          <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
+          <p className="text-[#35383F] font-[poppins] text-sm leading-[32px]">
             Our collapsible <strong>Seamless Tubes</strong> are engineered for
             high-barrier protection, our seamless tubes offer{" "}
             <strong>tamper-evident security,</strong>
@@ -75,13 +75,8 @@ export default function GreenPackaging() {
           <PackagingProduct />
         </section>
 
-        {/* Divider */}
-        <section className="my-8 w-[96%] md:w-[80%] mx-auto">
-          <Divider />
-        </section>
-
         {/* why choose us */}
-        <section className="w-[90%] mx-auto">
+        <section className="w-[90%] lg:w-[80%] mx-auto">
           <h1 className="text-[#016E97] font-[poppins] text-lg md:text-[40px] font-bold mb-4 text-center">
             Why Choose Us?
           </h1>
@@ -115,12 +110,12 @@ export default function GreenPackaging() {
         </section>
 
         {/* Divider */}
-        <section className="my-8 w-[96%] md:w-[80%] mx-auto">
+        <section className=" w-[96%] lg:w-[80%] mx-auto">
           <Divider />
         </section>
 
         {/**Testimonial */}
-        <section className="w-[90%] lg:w-[80%] mx-auto" data-aos="fade-up">
+        <section className="w-[90%] lg:w-[80%] lg:px-[100px] mx-auto" data-aos="fade-up">
           <Testimonial
             headerText="Hear what some of our customer and clients have to say"
             paragraphText=""
@@ -128,12 +123,12 @@ export default function GreenPackaging() {
         </section>
 
         {/* Divider */}
-        <section className="w-[96%] md:w-[80%] mx-auto">
+        <section className="w-[96%] lg:w-[80%] mx-auto">
           <Divider />
         </section>
 
         {/**Conact Section */}
-        <section className="w-[90%] mx-auto" data-aos="fade-up">
+        <section className="" data-aos="fade-up">
           <Contact />
         </section>
       </main>

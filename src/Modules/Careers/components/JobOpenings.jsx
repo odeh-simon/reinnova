@@ -25,7 +25,7 @@ export default function JobOpenings() {
       <h2 className="text-sm md:text-xl text-center font-semibold text-[#016E97] font-[poppins]">
         Our Current Openings
       </h2>
-      <p className="text-xs md:text-sm font-[poppins] text-[#030B1E]">
+      <p className="text-xs md:text-sm font-[poppins] text-[#030B1E] lg:px-[100px]">
         We are constantly seeking talented and passionate individuals to join
         our team across various disciplines. Explore our current openings and
         discover how your skills and experience can contribute to our mission

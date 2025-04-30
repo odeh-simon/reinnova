@@ -2,17 +2,17 @@ import PropTypes from "prop-types";
 
 const FirstAluminiumCard = ({ header, description }) => {
   return (
-    <div className="bg-[#B3AEB2B3] rounded-[10px] px-4 py-6 flex flex-col gap-5 items-center text-center">
+    <div className="bg-[#4F656D] shadow-custom-black p-4 flex flex-col gap-5 items-center text-center">
       {/* Header with fixed height */}
       <h2
-        className="text-[#05232E] font-[RocknRollOne] text-lg text-center uppercase leading-[40px]"
+        className="text-[#EDFAFF] font-[RocknRollOne] text-base text-center uppercase"
         style={{ minHeight: "80px" }} // Adjust height as needed
       >
         {header}
       </h2>
       {/* Description */}
       <p
-        className="font-[poppins] text-[#030B1E] text-sm md:text-lg"
+        className="font-[poppins] text-[#EDFAFF] text-sm md:text-base"
         dangerouslySetInnerHTML={{ __html: description }}
       ></p>
     </div>

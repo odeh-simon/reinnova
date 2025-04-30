@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import arrow from "../../../assets/icons/arrow-right.svg";
-import plasticIcon from "../../../assets/icons/Home Icons/recycling-plastic.svg";
-import tubeIcon from "../../../assets/icons/Home Icons/tube.svg";
-import aluminiumIcon from "../../../assets/icons/Home Icons/aluminium.svg";
-
 const defaultBG = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1744030647/homebg_vynxay.png";
 const backgroundImage1 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295462/homeBG_kkqhtw.png";
 const backgroundImage2 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1744030619/homeBG2_s7ix7i.png";
-const backgroundImage3 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295471/homeBG3_dehbvr.png";
-const backgroundImage4 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295476/homeBG4_gqr3xz.png";
+const backgroundImage3 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295476/homeBG4_gqr3xz.png";
+const backgroundImage4 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295471/homeBG3_dehbvr.png";
 const backgroundImage5 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295480/homeBG5_jbq4op.png";
-
+const plasticIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021091/recycling-plastic_dqca2h.svg";
+const tubeIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021091/tube_ek40uj.svg";
+const aluminiumIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021087/aluminium_azdy6q.svg";
 const HeaderSlide = () => {
   const slidesData = [
     {
@@ -57,87 +55,151 @@ const HeaderSlide = () => {
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isSliding, setIsSliding] = useState(false);
-  const [direction, setDirection] = useState("next"); // 'next' or 'prev' for direction control
+  const [showContent, setShowContent] = useState(false);
+  const [zoomBackground, setZoomBackground] = useState(false);
 
-  // Automatically transition to the next slide every 5 seconds
   useEffect(() => {
+    setIsSliding(true);
+    setShowContent(false);
+    setZoomBackground(false);
+
+    const slideInTimer = setTimeout(() => {
+      setIsSliding(false);
+      setShowContent(true);
+    }, 1000);
+
+    const zoomTimer = setTimeout(() => {
+      setZoomBackground(true);
+    }, 1500);
+
     const interval = setInterval(() => {
       handleNextSlide();
-    }, 5000);
+    }, 7000);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      clearTimeout(slideInTimer);
+      clearTimeout(zoomTimer);
+      clearInterval(interval);
+    };
+  }, [currentSlide]);
 
   const handleNextSlide = () => {
-    setIsSliding(true);
-    setDirection("next");
-    setTimeout(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
-      setIsSliding(false);
-    }, 10); // Transition duration
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
   };
 
   return (
-    <div className="relative flex flex-col w-full h-[50vh] md:h-[95vh] text-white overflow-hidden">
-      {/* Slide Wrapper */}
+    <div className="relative flex flex-col w-full h-[50vh] lg:h-[95vh] text-white overflow-hidden">
+      <style>
+        {`
+          @keyframes slideIn {
+            from {
+              transform: translateX(100%);
+            }
+            to {
+              transform: translateX(0);
+            }
+          }
+
+          @keyframes slideUp {
+            from {
+              transform: translateY(100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+
+          @keyframes zoomIn {
+            from {
+              transform: scale(1);
+            }
+            to {
+              transform: scale(1.2);
+            }
+          }
+
+          .slide-in {
+            animation: slideIn 1s ease-out forwards;
+          }
+
+          .slide-up {
+            animation: slideUp 0.5s ease-out forwards;
+          }
+
+          .zoom-in {
+            animation: zoomIn 5s ease-out forwards;
+          }
+        `}
+      </style>
       <div className="relative w-full h-full">
         {slidesData.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-transform duration-500 ease-in-out w-full ${
-              index === currentSlide
-                ? `translate-x-0`
-                : isSliding
-                ? direction === "next"
-                  ? `translate-x-full`
-                  : `-translate-x-full`
-                : index < currentSlide
-                ? `-translate-x-full`
-                : `translate-x-full`
-            }`}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            } ${index === currentSlide && isSliding ? "slide-in" : ""}`}
             style={{
               backgroundImage: `url(${slide.backgroundImage})`,
               backgroundSize: "cover",
               backgroundPosition: "bottom",
             }}
           >
-            {/* Slide content */}
-            <div className={`h-full flex flex-col md:w-[80%] mx-auto items-center justify-center`}>
-              {/* New Section: Icon and Text */}
-              {slide.icon && slide.iconText && (
-                <div className="flex justify-center items-center gap-3 mb-4 p-2 rounded-[10px] bg-white">
-                  <img src={slide.icon} alt="icon" className="w-15 h-15 object-cover" />
-                  <p className="text-base md:text-lg font-[poppins] font-semibold text-[#0765A5]">{slide.iconText}</p>
-                </div>
-              )}
+            <div
+              className={`absolute inset-0 ${
+                index === currentSlide && zoomBackground && index !== 0 ? "zoom-in" : ""
+              }`}
+              style={{
+                backgroundImage: `url(${slide.backgroundImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "bottom",
+              }}
+            />
+            <div className="h-full flex flex-col lg:w-[70%] mx-auto items-center justify-center relative z-10">
+              <div
+                className={`${
+                  index === currentSlide && showContent && slide.middleText
+                    ? "slide-up"
+                    : "opacity-0"
+                } text-center`}
+              >
+                {slide.icon && slide.iconText && (
+                  <div className="flex w-fit justify-center items-center gap-2 mb-3 py-1 px-3 mx-auto rounded-lg bg-white">
+                    <img src={slide.icon} alt="icon" className="w-10 h-10 object-cover" />
+                    <p className="text-xs font-[poppins] font-semibold text-[#0765A5]">
+                      {slide.iconText}
+                    </p>
+                  </div>
+                )}
 
-              <h1 className="text-lg md:text-[40px] lg:text-[50px] px-8 md:px-16 font-[RocknRollOne] text-center mb-4">
-                {slide.middleText}
-              </h1>
+                <h1 className="text-base md:text-[40px] px-6 md:px-12 font-[RocknRollOne] text-center mb-3">
+                  {slide.middleText}
+                </h1>
 
-              {/* Buttons */}
-              {slide.showButtons !== false && (
-                <div className="flex gap-4 items-center justify-center mt-6">
-                  <Link
-                    to="/contact-us"
-                    className="bg-white text-[#0765A5] hover:text-blue-700 hover:text-xl transition-all px-4 md:px-[32px] py-3 rounded-[10px] font-[poppins] font-medium text-lg"
-                  >
-                    Contact Us
-                  </Link>
-
-                  {slide.learnMoreLink && (
+                {slide.showButtons !== false && (
+                  <div className="flex gap-3 items-center justify-center mt-4">
                     <Link
-                      to={slide.learnMoreLink}
-                      className="bg-transparent border-2 border-white flex items-center rounded-[10px] px-3 py-2 md:px-[32px] md:py-3 gap-4"
+                      to="/contact-us"
+                      className="bg-white text-[#0765A5] hover:text-blue-700 hover:text-base transition-all px-3 md:px-4 py-2 rounded-lg font-[poppins] font-medium text-sm"
                     >
-                      <span className="font-[poppins] font-medium text-lg hover:text-xl transition-all">
-                        Learn More{" "}
-                      </span>
-                      <img src={arrow} alt="arrow" />
+                      Contact Us
                     </Link>
-                  )}
-                </div>
-              )}
+
+                    {slide.learnMoreLink && (
+                      <Link
+                        to={slide.learnMoreLink}
+                        className="bg-transparent border-2 border-white flex items-center rounded-lg px-2 py-1 md:px-4 md:py-2 gap-2"
+                      >
+                        <span className="font-[poppins] font-medium text-sm hover:text-base transition-all">
+                          Learn More
+                        </span>
+                        <img src={arrow} alt="arrow" className="w-4 h-4" />
+                      </Link>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}

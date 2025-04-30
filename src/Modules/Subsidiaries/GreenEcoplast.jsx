@@ -34,13 +34,13 @@ export default function GreenEcoplast() {
         />
       </header>
 
-      <main className="w-[90%] mx-auto flex flex-col gap-[40px] lg:gap-[80px] mt-[100px]">
+      <main className="w-full flex flex-col gap-[40px] md:gap-[80px] mt-[50px] lg:mt-[80px]">
         {/**About Reinnova Green Packaging */}
-        <section className="flex flex-col gap-5" data-aos="fade-up">
-          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px] mb-8">
+        <section className="flex flex-col gap-5 w-[90%] lg:w-[80%] mx-auto" data-aos="fade-up">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px] lg:mb-8">
             About Us - Reinnova Green Ecoplast
           </h2>
-          <div className="px-6 py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 rounded-[28px] bg-white shadow-custom mb-6">
+          <div className=" py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 md:rounded-r-[40px] bg-white md:shadow-custom md:mb-6">
             <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
               Nigeria generates over 2.5 million tonnes of plastic waste
               annually, with a growing population of over 220 million people.
@@ -78,43 +78,40 @@ export default function GreenEcoplast() {
           <CommitmentToQuality />
         </section>
 
-        {/**Our Plastic Recycling Products */}
-        <section data-aos="fade-up">
-          <RecyclingProducts />
-        </section>
-
-        {/**Our Plastic Recycling Process */}
-        <section data-aos="fade-up">
-          <RecyclingProcess />
-        </section>
-
-        {/**The Benefits of Plastic Packaging */}
-        <section data-aos="fade-up">
-          <BenefitsOfPlasticPackaging />
-        </section>
-
-        {/**Divider */}
-        <section className="w-[96%] md:w-[80%] mx-auto">
-          <Divider />
-        </section>
-
-        {/**Testimonial */}
-        <section data-aos="fade-up" className="w-[90%] lg:w-[80%] mx-auto">
-          <Testimonial
-            headerText="Hear what some of our customer and clients have to say"
-            paragraphText=""
-          />
-        </section>
-
-        {/**Divider */}
-        <section className="w-[96%] md:w-[80%] mx-auto">
-          <Divider />
-        </section>
-
-        {/**Contact Us */}
-        <section data-aos="fade-up">
-          <Contact />
-        </section>
+        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col gap-[40px] md:gap-[80px] lg:gap-[100px]">
+          {/**Our Plastic Recycling Products */}
+          <section data-aos="fade-up">
+            <RecyclingProducts />
+          </section>
+          {/**Our Plastic Recycling Process */}
+          <section data-aos="fade-up">
+            <RecyclingProcess />
+          </section>
+          {/**The Benefits of Plastic Packaging */}
+          <section data-aos="fade-up">
+            <BenefitsOfPlasticPackaging />
+          </section>
+          {/**Divider */}
+          <section className="w-[96%] md:w-[80%] mx-auto">
+            <Divider />
+          </section>
+          {/**Testimonial */}
+          <section data-aos="fade-up" className="w-[90%] lg:w-[80%] mx-auto">
+            <Testimonial
+              headerText="Hear what some of our customer and clients have to say"
+              paragraphText=""
+            />
+          </section>
+          {/**Divider */}
+          <section className="w-[96%] md:w-[80%] mx-auto">
+            <Divider />
+          </section>
+          </div>
+          {/**Contact Us */}
+          <section data-aos="fade-up">
+            <Contact />
+          </section>
+        
       </main>
 
       {/**Footer Section */}

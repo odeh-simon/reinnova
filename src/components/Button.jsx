@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 const Button = ({ label,  onClick}) => {
   return (
     <button
-      className={`relative w-fit flex items-center justify-center cursor-pointer font-montserrat hover:bg-[#3f6473] bg-[#016E97] text-white hover:border-none rounded-[10px] px-[32px] py-3`}
+      className={`relative w-fit flex items-center justify-center cursor-pointer font-montserrat hover:bg-[#016f97e5] bg-[#016E97] text-white hover:border-none rounded-[10px] px-[26px] py-3`}
       onClick={onClick}
     >
-      <span className="text-center text-xs font-[poppins] font-medium md:text-lg">{label}</span>
+      <span className="text-center text-xs font-[poppins] font-medium md:text-base">{label}</span>
     </button>
   );
 };

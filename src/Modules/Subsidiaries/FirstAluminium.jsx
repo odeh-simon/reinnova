@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 import {
   AluminiumProcess,
   AluminiumProducts,
-  BenefitsOfAluminium,
+  // BenefitsOfAluminium,
   WhyFirstAluminium,
 } from "./components/first-aluminium/AluminiumExports";
 import Divider from "../../components/Divider";
@@ -35,13 +35,13 @@ export default function FirstAluminium() {
         />
       </header>
 
-      <main className="w-[90%] mx-auto flex flex-col gap-[40px] lg:gap-[80px] mt-[100px]">
+      <main className="w-full flex flex-col gap-[40px] md:gap-[80px] mt-[50px] lg:mt-[100px]">
         {/**About Reinnova Green Packaging */}
-        <section className="flex flex-col gap-5" data-aos="fade-up">
-          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
+        <section className="flex flex-col gap-5 w-[90%] lg:w-[80%] lg:px-[50px] mx-auto" data-aos="fade-up">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px]">
             About First Aluminium Nigeria Limited
           </h2>
-          <div className="flex flex-col gap-3 p-6 bg-white shadow-custom-gray">
+          <div className="flex flex-col gap-3 lg:py-10 md:px-12 bg-white md:shadow-custom-gray">
             <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
               First Aluminium Nigeria, formerly known as{" "}
               <strong>Aluminium City (Alucity),</strong>
@@ -85,32 +85,32 @@ export default function FirstAluminium() {
         </section>
 
         {/**Our Plastic Recycling Products */}
-        <section data-aos="fade-up">
+        <section data-aos="fade-up" className="w-[90%] lg:w-[80%] mx-auto">
           <AluminiumProducts />
         </section>
 
         {/**Our Plastic Recycling Process */}
-        <section data-aos="fade-up">
+        <section data-aos="fade-up" className="w-full">
           <AluminiumProcess />
         </section>
 
         {/**The Benefits of Plastic Packaging */}
-        <section data-aos="fade-up">
+        {/* <section data-aos="fade-up">
           <BenefitsOfAluminium />
-        </section>
+        </section> */}
 
         {/* why first aluminium */}
-        <section data-aos="fade-up">
+        <section data-aos="fade-up" className="w-[85%] lg:w-[80%] mx-auto">
           <WhyFirstAluminium />
         </section>
 
         {/* divider */}
-        <section>
+        <section className="w-[90%] lg:w-[80%] px-[100px] mx-auto">
           <Divider />
         </section>
 
         {/**Testimonial */}
-        <section data-aos="fade-up" className="w-[90%] lg:w-[80%] mx-auto">
+        <section data-aos="fade-up" className="w-[90%] lg:w-[80%] lg:px-[100px] mx-auto">
           <Testimonial
             headerText="Hear what some of our customer and clients have to say"
             paragraphText=""
@@ -118,7 +118,7 @@ export default function FirstAluminium() {
         </section>
 
         {/* divider */}
-        <section>
+        <section className="w-[90%] lg:w-[80%] px-[100px] mx-auto">
           <Divider />
         </section>
 

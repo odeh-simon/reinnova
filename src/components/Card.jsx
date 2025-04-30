@@ -14,7 +14,7 @@ const Card = ({
   headerAlign = 'text-center'
 }) => {
   return (
-    <div className={`py-5 flex flex-col px-4 rounded-[10px] h-auto shadow-md relative ${bgColor}`}>
+    <div className={`py-5 flex flex-col px-4 rounded-[10px] min-h-[330px] shadow-md relative ${bgColor}`}>
       {/* Optional Steps */}
       {steps && (
         <p className="text-xs md:text-sm font-medium text-left">

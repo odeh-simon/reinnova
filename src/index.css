@@ -2,39 +2,47 @@
 
 @font-face {
     font-family: 'RocknRollOne';
-    src: url('./assets/fonts/RocknRoll_One/RocknRollOne-Regular.ttf') format('truetype');
+    src: url('https://res.cloudinary.com/dsnz8adqi/raw/upload/v1746026958/RocknRollOne-Regular_qrbaut.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  .shadow-custom {
+.shadow-custom {
     box-shadow: 7px 7px 12px 7px rgba(1, 110, 151, 0.70);
 }
-  .shadow-custom-green {
+.shadow-custom-green {
     box-shadow: 7px 7px 12px 7px #4FAE49;
 }
-  .shadow-custom-gray {
+.shadow-custom-gray {
     box-shadow: 7px 7px 12px 12px rgba(174, 178, 179, 0.70);
 }
 
+.shadow-custom-darkBrown {
+  box-shadow: 7px 7px 7px 4px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-custom-black {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.40);
+}
+
 @keyframes bounce-once {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(-10px);
-  }
-  40% {
-    transform: translateX(5px);
-  }
-  60% {
-    transform: translateX(-2px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-10px);
+    }
+    40% {
+        transform: translateX(5px);
+    }
+    60% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .animate-bounce-once {
-  animation: bounce-once 0.5s ease-out;
+    animation: bounce-once 0.5s ease-out;
 }

@@ -10,6 +10,7 @@ function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [issubsidiariesDropDownOpen, setIsSubsidiariesDropDown] =
     useState(false);
+  const [isAboutDropDownOpen, setIsAboutDropDown] = useState(false);
   const { pathname } = useLocation();
 
   const navigate = useNavigate();
@@ -23,12 +24,16 @@ function NavBar() {
     // Close dropdowns when menu is closed
     if (!isMenuOpen) {
       setIsSubsidiariesDropDown(false);
+      setIsAboutDropDown(false);
     }
   };
 
   // Function to toggle the Projects dropdown state
   const togglesubsidiariesDropDown = () => {
     setIsSubsidiariesDropDown(!issubsidiariesDropDownOpen);
+  };
+  const toggleAboutDropDown = () => {
+    setIsAboutDropDown(!isAboutDropDownOpen);
   };
 
   // Effect to handle scroll event
@@ -54,11 +59,11 @@ function NavBar() {
 
   return (
     <div className={`navbar ${isSticky ? "sticky" : ""}`}>
-      <div className="flex justify-between items-center w-[100%] pr-8 mx-auto h-[6rem] pt-[1rem]">
+      <div className="flex justify-between lg:justify-around items-center w-[100%] pr-8 mx-auto h-[5rem] py-[1rem]">
         <div className="flex items-center">
-          <div className="">
+          <div className="pt-[1rem]">
             <img
-              className="w-[150px] h-[150px] lg:w-[350.457px] lg:h-[250.612px]"
+              className="w-[200px] h-[200px] lg:w-[300px] lg:h-[190px]"
               alt="logo"
               src={logo}
             />
@@ -105,14 +110,46 @@ function NavBar() {
                   <Link to="/">Home</Link>
                 </li>
 
-                <li
-                  className={`lg:inline lg:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
-                    pathname === "/about-us"
-                      ? "border-b-[7px] border-[#016E97]"
-                      : "border-transparent"
-                  } `}
-                >
-                  <Link to="/about-us">About Us</Link>
+                <li className="lg:inline lg:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] border-transparent relative">
+                  <button onClick={toggleAboutDropDown}>
+                    About Us{" "}
+                    <svg
+                      className="inline w-4 h-4 ml-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {isAboutDropDownOpen && (
+                    <ul className="ml-4 ">
+                      <li
+                        className={`py-2 px-4 hover:bg-blue-800 font-[poppins] text-[14px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
+                          pathname === "/about-us"
+                            ? "border-b-[7px] border-[#016E97]"
+                            : "border-transparent"
+                        } `}
+                      >
+                        <Link to="/about-us">About Us</Link>
+                      </li>
+                      <li
+                        className={`py-2 px-4 hover:bg-blue-800 font-[poppins] text-[14px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
+                          pathname === "/team"
+                            ? "border-b-[7px] border-[#016E97]"
+                            : "border-transparent"
+                        } `}
+                      >
+                        <Link to="/team">Our Team</Link>
+                      </li>
+                    </ul>
+                  )}
                 </li>
 
                 <li className="lg:inline lg:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] border-transparent relative">
@@ -188,15 +225,7 @@ function NavBar() {
                 >
                   <Link to="/career">Carrer</Link>
                 </li>
-                <li
-                  className={`lg:inline lg:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] hover:border-[white] border-b-2 ${
-                    pathname === "/team"
-                      ? "border-b-[7px] border-[#016E97]"
-                      : "border-transparent"
-                  } `}
-                >
-                  <Link to="/team">Team</Link>
-                </li>
+             
               </ul>
               <div className="w-[50%] mt-4">
                 <Button
@@ -208,10 +237,10 @@ function NavBar() {
           )}
         </div>
 
-        <div className="hidden lg:flex items-center text-sm" >
+        <div className="hidden lg:flex items-center gap-8 text-sm">
           <ul className="lg:grid grid-flow-col gap-[20px] items-center">
             <li
-              className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px] `}
+              className={`lg:inline md:px-1 font-[poppins] text-base text-[#016E97] pb-[2px] `}
             >
               <div className="flex flex-col items-center">
                 {pathname === "/" ? (
@@ -229,25 +258,71 @@ function NavBar() {
             </li>
 
             <li
-              className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px] `}
+              className="lg:inline md:px-1 font-[poppins] text-base text-[#016E97] hover:border-b-2 pb-[2px] border-transparent relative"
+              onMouseEnter={() => setIsAboutDropDown(true)}
+              onMouseLeave={() => setIsAboutDropDown(false)}
             >
-              <div className="flex flex-col items-center">
-                {pathname === "/about-us" ? (
+              <button className="cursor-pointer flex flex-col items-center">
+                {pathname === "/about-us" ||
+                pathname === "/team" ? (
                   <img
                     src={dotIcon}
                     alt=""
                     className="text-center w-[10px] h-[10px]"
                   />
                 ) : null}
-                <Link to="/about-us">About Us</Link>
-                {pathname === "/about-us" ? (
+                <div className="flex items-center gap-1">
+                  <span>About Us </span>
+                  <svg
+                    className="inline w-4 h-4 ml-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                {pathname === "/about-us" ||
+                pathname === "/team" ? (
                   <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
                 ) : null}
-              </div>
+              </button>
+              {isAboutDropDownOpen && (
+                <ul className="absolute top-full left-0 bg-[#DEF6FF] w-32 shadow-lg">
+                  <li
+                    className={`py-2 px-4 hover:bg-[#016E97] font-[poppins] text-[16px] text-[black] hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
+                      pathname === "/about-us"
+                        ? "border-b-[7px] border-[#016E97]"
+                        : "border-transparent"
+                    } `}
+                  >
+                    <Link to="/about-us" className="hover:text-white">
+                      About Us
+                    </Link>
+                  </li>
+                  <li
+                    className={`py-2 px-4 hover:bg-[#016E97]  font-[poppins] text-[16px] text-black hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
+                      pathname === "/team"
+                        ? "border-b-[7px] border-[#016E97]"
+                        : "border-transparent"
+                    } `}
+                  >
+                    <Link to="/team" className="hover:text-white">
+                      Our Team
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
 
             <li
-              className="lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] hover:border-b-2 pb-[2px] border-transparent relative"
+              className="lg:inline md:px-1 font-[poppins] text-base text-[#016E97] hover:border-b-2 pb-[2px] border-transparent relative"
               onMouseEnter={() => setIsSubsidiariesDropDown(true)}
               onMouseLeave={() => setIsSubsidiariesDropDown(false)}
             >
@@ -287,7 +362,7 @@ function NavBar() {
               {issubsidiariesDropDownOpen && (
                 <ul className="absolute top-full left-0 bg-[#DEF6FF] w-32 shadow-lg">
                   <li
-                    className={`py-2 px-4 hover:bg-[#016E97] font-[poppins] text-[10px] text-[black] hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
+                    className={`py-2 px-4 hover:bg-[#016E97] font-[poppins] text-xs text-[black] hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
                       pathname === "/green-packaging"
                         ? "border-b-[7px] border-[#016E97]"
                         : "border-transparent"
@@ -298,7 +373,7 @@ function NavBar() {
                     </Link>
                   </li>
                   <li
-                    className={`py-2 px-4 hover:bg-[#016E97]  font-[poppins] text-[10px] text-black hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
+                    className={`py-2 px-4 hover:bg-[#016E97]  font-[poppins] text-xs text-black hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
                       pathname === "/green-ecoplast"
                         ? "border-b-[7px] border-[#016E97]"
                         : "border-transparent"
@@ -309,7 +384,7 @@ function NavBar() {
                     </Link>
                   </li>
                   <li
-                    className={`py-2 px-4 hover:bg-[#016E97]  font-[poppins] text-[10px] text-black hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
+                    className={`py-2 px-4 hover:bg-[#016E97]  font-[poppins] text-xs text-black hover:border-b-2 pb-[2px] hover:border-[#016E97] border-b-2 ${
                       pathname === "/first-aluminium"
                         ? "border-b-[7px] border-[#016E97]"
                         : "border-transparent"
@@ -324,7 +399,7 @@ function NavBar() {
             </li>
 
             <li
-              className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px]`}
+              className={`lg:inline md:px-1 font-[poppins] text-base text-[#016E97] pb-[2px]`}
             >
               <div className="flex flex-col items-center">
                 {pathname === "/blog" ? (
@@ -341,7 +416,7 @@ function NavBar() {
               </div>
             </li>
             <li
-              className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px]  `}
+              className={`lg:inline md:px-1 font-[poppins] text-base text-[#016E97] pb-[2px]  `}
             >
               <div className="flex flex-col items-center">
                 {pathname === "/career" ? (
@@ -357,26 +432,9 @@ function NavBar() {
                 ) : null}
               </div>
             </li>
-            <li
-              className={`lg:inline md:px-1 font-[poppins] text-[18px] text-[#016E97] pb-[2px]  `}
-            >
-              <div className="flex flex-col items-center">
-                {pathname === "/team" ? (
-                  <img
-                    src={dotIcon}
-                    alt=""
-                    className="text-center w-[10px] h-[10px]"
-                  />
-                ) : null}
-                <Link to="/team">Team</Link>
-                {pathname === "/team" ? (
-                  <span className="h-[7px] w-full bg-[#016E97] rounded-[20px]"></span>
-                ) : null}
-              </div>
-            </li>
           </ul>
 
-          <div className="hidden lg:flex items-center pl-4">
+          <div className="hidden lg:flex items-center">
             <Button
               label="Contact Us"
               onClick={() => navigate("/contact-us")}

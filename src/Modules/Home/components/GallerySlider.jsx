@@ -17,6 +17,14 @@ const galleryImage12 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v17434
 const galleryImage13 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451903/image13_dhjkjn.png'
 const galleryImage14 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451903/image14_oivh0d.png'
 const galleryImage15 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1743451903/image15_afgs89.png'
+const galleryImage16 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1746032160/clear-blue_helkal.png'
+const galleryImage17 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1746032162/green-flakes_dmpdx5.png'
+const galleryImage18 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1746032164/green-pet_j4fmbu.png'
+const galleryImage19 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1746032165/pellets_nplj8b.png'
+const galleryImage20 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1746032159/blue-pet_ptgeku.png'
+const galleryImage21 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1746032159/black-pellet2_kvfpqi.png'
+const galleryImage22 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1746032157/black-pellet_ra49dk.png'
+const galleryImage23 = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1746032157/amber-flakes_qmnxpo.png'
 
 const images = [
   galleryImage1,
@@ -34,6 +42,14 @@ const images = [
   galleryImage13,
   galleryImage14,
   galleryImage15,
+  galleryImage16,
+  galleryImage17,
+  galleryImage18,
+  galleryImage19,
+  galleryImage20,
+  galleryImage21,
+  galleryImage22,
+  galleryImage23,
 ];
 
 const GallerySlider = () => {
@@ -72,7 +88,7 @@ const GallerySlider = () => {
   return (
     <div className="flex gap-2 flex-col">
       <div>
-        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px] mb-4">
+        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px] mb-4">
           Our Gallery
         </h2>
         <p className="text-center text-[#35383F] text-xs md:text-xl font-[RocknRollOne]">

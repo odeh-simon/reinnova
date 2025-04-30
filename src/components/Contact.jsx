@@ -2,13 +2,13 @@ import SocialIcons from '../components/socialIcons';
 
 export default function Contact() {
   return (
-    <div className="w-full px-8">
+    <div className="w-[90%] lg:w-[80%] mx-auto lg:px-8">
       <div className=" flex flex-col gap-[56px] mb-6">
         <header className='flex flex-col items-center justify-center'>
-          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[30px] mb-4">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] mb-4">
             Reach out to us let&apos;s work together
           </h2>
-          <p className="text-center text-[#35383F] text-xs md:text-base font-[RocknRollOne]">
+          <p className="text-center text-[#35383F] text-xs md:text-sm px-10 font-[RocknRollOne]">
             Please feel free to connect with us through email, give us a call,
             or use the convenient contact form provided below to send us a brief
             message.{" "}
@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="w-full flex flex-col-reverse items-start gap-6 md:flex-row md:justify-between">
 
           {/**Manual Contacts */}
-          <div className="w-full md:w-2/3">
+          <div className="w-full md:w-2/3 flex flex-col gap-6">
             <p className="text-[#35383F] text-xs font-medium md:text-sm font-[poppins]">
               <strong className="font-bold text-sm md:text-base">Email: </strong>
               customersupport@reinnova.com
@@ -34,6 +34,12 @@ export default function Contact() {
                 Whatsapp Only:{" "}
               </strong>{" "}
               +234(0)987654321
+            </p>
+            <p className="text-[#35383F] text-xs font-medium md:text-sm font-[poppins]">
+              <strong className="font-bold text-sm md:text-base">
+                Office Address:{" "}
+              </strong>{" "}
+              No 3 Akilo Road, Ogba, Ikeja, Lagos- Nigeria
             </p>
 
             {/* social icons */}

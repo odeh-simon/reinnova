@@ -28,36 +28,40 @@ export const CommitmentToQuality = () => {
   return (
     <>
       <div className="flex flex-col gap-4">
-        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[30px]">
-          Commitment to Quality
-        </h2>
-        <p className="text-[#35383F] font-[poppins] text-sm md:text-lg md:leading-[40px]">
-          Strict quality checks are conducted at every step of our process,
-          ensuring that <span className="font-medium">only the finest pellets and flakes</span> reach our clients.
-          Whether for <strong>local use or export,</strong> our products drive sustainability
-          while supporting industries in creating eco-friendly packaging
-          solutions.
-        </p>
+        <div className="w-[90%] lg:w-[80%] mx-auto">
+          <h2 className="text-center text-[#016E97] mb-6 font-[poppins] font-semibold text-[16px] md:text-[30px]">
+            Commitment to Quality
+          </h2>
+          <p className="text-[#35383F] font-[poppins] text-sm md:text-base md:leading-[40px]">
+            Strict quality checks are conducted at every step of our process,
+            ensuring that <span className="font-medium">only the finest pellets and flakes</span> reach our clients.
+            Whether for <strong>local use or export,</strong> our products drive sustainability
+            while supporting industries in creating eco-friendly packaging
+            solutions.
+          </p>
+        </div>
 
         {/**Image Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <CommitmentCard
-            header="Processing Power"
-            imageSrc={processingPower}
-            description="40+ tonnes of PET waste crushed and processed into flakes daily. 20+ tonnes of PP/HDPE waste transformed into high-quality pellets."
-          />
-          <CommitmentCard
-            header="Global Reach"
-            imageSrc={globalReach}
-            description="Since 2019, we have processed and exported over 25,000 MT of recycled plastic materials to Europe, Asia, and the USA."
-          />
-          <CommitmentCard
-            header="State-of-the-Art Sorting Technology"
-            imageSrc={technology}
-            description="Our advanced polymer sorter ensures purity by removing all impurities, guaranteeing premium quality."
-          />
+        <session className="bg-[#4C9AB6] py-[60px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-[90%] lg:w-[80%] mx-auto">
+            <CommitmentCard
+              header="Processing Power"
+              imageSrc={processingPower}
+              description="40+ tonnes of PET waste crushed and processed into flakes daily. 20+ tonnes of PP/HDPE waste transformed into high-quality pellets."
+            />
+            <CommitmentCard
+              header="Global Reach"
+              imageSrc={globalReach}
+              description="Since 2019, we have processed and exported over 25,000 MT of recycled plastic materials to Europe, Asia, and the USA."
+            />
+            <CommitmentCard
+              header="State-of-the-Art Sorter"
+              imageSrc={technology}
+              description="Our advanced polymer sorter ensures purity by removing all impurities, guaranteeing premium quality."
+            />
           
-        </div>
+          </div>
+        </session>
       </div>
     </>
   );
@@ -73,7 +77,7 @@ export const RecyclingProducts = () => {
   return (
     <>
       <div>
-        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[30px] mb-8">
+        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] mb-8">
           Our Plastic Recycling Products
         </h2>
 
@@ -102,7 +106,7 @@ export const RecyclingProducts = () => {
 export const RecyclingProcess = () => {
   return (
     <div>
-      <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[30px] mb-8">
+      <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] md:mb-8">
         Our Plastic Recycling Process
       </h2>
 
@@ -197,7 +201,7 @@ export const BenefitsOfPlasticPackaging = () => {
   return (
     <>
       <div>
-        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[30px] mb-8">
+        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] md:mb-8">
           The Benefits of Plastic Packaging
         </h2>
 

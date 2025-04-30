@@ -1,25 +1,26 @@
 //this component is where the data for the landing page cards are stored
 
 import Card from "../../../components/Card";
-import recycleIcon from "../../../assets/icons/Home Icons/recycle-icon.svg";
-import bottleIcon from "../../../assets/icons/Home Icons/bottle-icon.svg";
-import trashIcon from "../../../assets/icons/Home Icons/trash-icon.svg";
-import roofIcon from "../../../assets/icons/Home Icons/roof-icon.svg";
 import { useNavigate } from "react-router-dom";
+
 const toothbrush = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295489/toothbrush_hy1tud.png'
 const spoons = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295484/spoons_kloz9x.png'
 const aluminium = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295456/aluminium_oozww1.png'
 const watermarkBG = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292675/watermarkBG_asqyuf.png'
+const bottleIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021085/bottle-icon_zktqjz.svg";
+const recycleIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021085/recycle-icon_gjocf6.svg";
+const trashIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021087/trash-icon_au7g2j.svg";
+const roofIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021087/roof-icon_tgu1d9.svg";
 
 export const SustainabilityCard = () => {
-  return (
+  return ( 
     <div className="w-full flex flex-col gap-6">
       {/* the Sustainability Card content goes here */}
       <div className="flex flex-col gap-1">
-        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
+        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px]">
           Our Commitment to Sustainability
         </h2>
-        <p className="text-center text-[#35383F] text-xs md:text-xl font-[RocknRollOne]">
+        <p className="text-center text-[#35383F] text-xs md:text-lg font-[RocknRollOne]">
           Creating a Greener Future Through Circular Economy Practices
         </p>
       </div>
@@ -76,50 +77,51 @@ export const SubsidiariesCard = () => {
   return (
     <div className=" w-full px-6 flex flex-col gap-6 mt-14 py-8 bg-center bg-cover" style={{backgroundImage: `url(${watermarkBG})`}}>
       {/* the Subsidiaries Card content goes here */}
-      <div className="flex flex-col gap-1">
-        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
-          Our Subsidiaries
-        </h2>
-        <p className="text-center text-[#35383F] text-xs md:text-xl font-[RocknRollOne]">
-          Reinnova Green Holding Company is a collective of three subsidiaries, each specializing in a unique area of sustainable product development and resource management
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[32px]">
-        <Card
-          bgColor="bg-[#E9F9FF]"
-          headerText="Reinnova Green Packaging"
-          imageSrc={toothbrush}
-          imageWidth="w-full"
-          imageHeight="h-[200px]"
-          imageCaption="Manufactures high-quality and innovative packaging solutions using recycled aluminium and sustainable laminate materials for various industries, including pharmaceutical, oral hygiene and body care"
-          captionAlign="text-left"
-          buttonText="Learn More"
-          onButtonClick={() => navigate("/green-packaging")}
-        />
-        <Card
-          bgColor="bg-[#E9F9FF]"
-          headerText="Reinnova Green Ecoplast"
-          imageSrc={spoons}
-          imageWidth="w-full"
-          imageHeight="h-[200px]"
-          imageCaption="Provides a solution for plastic waste by transforming it into valuable resources. They collect plastic waste, meticulously sort it, and reprocess it into high-quality plastic flakes and pellets for use in new products."
-          captionAlign="text-left"
-          buttonText="Learn More"
-          onButtonClick={() => navigate("/green-ecoplast")}
-        />
-        <Card
-          bgColor="bg-[#E9F9FF]"
-          headerText="First Aluminum Nigeria Limited"
-          imageSrc={aluminium}
-          imageWidth="w-full"
-          imageHeight="h-[200px]"
-          imageCaption="Offers exceptional aluminum roofing solutions while keeping sustainability at the forefront. They utilize recycled aluminum roofing sheets, reducing reliance on virgin materials and  lowering environmental impact."
-          captionAlign="text-left"
-          buttonText="Learn More"
-          onButtonClick={() => navigate("/first-aluminium")}
-        />
-      </div>
+      <section className="md:w-[90%] lg:w-[85%] mx-auto">
+        <div className="flex flex-col gap-1 lg:px-8">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px]">
+            Our Subsidiaries
+          </h2>
+          <p className="text-center text-[#35383F] text-[10px] mb-8 md:text-base font-[RocknRollOne]">
+            Reinnova Green Holding Company is a collective of three subsidiaries, each specializing in a unique area of sustainable product development and resource management
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px]">
+          <Card
+            bgColor="bg-[#E9F9FF]"
+            headerText="Reinnova Green Packaging"
+            imageSrc={toothbrush}
+            imageWidth="w-full"
+            imageHeight="h-[200px]"
+            imageCaption="Manufactures high-quality and innovative packaging solutions using recycled aluminium and sustainable laminate materials for various industries, including pharmaceutical, oral hygiene and body care"
+            captionAlign="text-left"
+            buttonText="Learn More"
+            onButtonClick={() => navigate("/green-packaging")}
+          />
+          <Card
+            bgColor="bg-[#E9F9FF]"
+            headerText="Reinnova Green Ecoplast"
+            imageSrc={spoons}
+            imageWidth="w-full"
+            imageHeight="h-[200px]"
+            imageCaption="Provides a solution for plastic waste by transforming it into valuable resources. They collect plastic waste, meticulously sort it, and reprocess it into high-quality plastic flakes and pellets for use in new products."
+            captionAlign="text-left"
+            buttonText="Learn More"
+            onButtonClick={() => navigate("/green-ecoplast")}
+          />
+          <Card
+            bgColor="bg-[#E9F9FF]"
+            headerText="First Aluminum Nigeria Limited"
+            imageSrc={aluminium}
+            imageWidth="w-full"
+            imageHeight="h-[200px]"
+            imageCaption="Offers exceptional aluminum roofing solutions while keeping sustainability at the forefront. They utilize recycled aluminum roofing sheets, reducing reliance on virgin materials and  lowering environmental impact."
+            captionAlign="text-left"
+            buttonText="Learn More"
+            onButtonClick={() => navigate("/first-aluminium")}
+          />
+        </div>
+      </section>
     </div>
   );
 };
@@ -133,10 +135,10 @@ export const WhyChooseUsCard = () => {
     <div className="w-full flex flex-col gap-8 px-3 py-8 mt-8">
       {/* the Why Choose Us Card content goes here */}
       <div className="flex flex-col gap-1">
-        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] lg:text-[40px]">
+        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px]">
           Why Choose Reinnova Green
         </h2>
-        <p className="text-center text-[#35383F] text-xs md:text-xl font-[RocknRollOne]">
+        <p className="text-center text-[#35383F] text-xs md:text-sm font-semibold font-[RocknRollOne]">
           Partnering with Reinnova Green: A Sustainable Choice for Your Business
           and the Environment
         </p>

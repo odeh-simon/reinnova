@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import JobOpenings from "./components/JobOpenings";
 import ApplicationProcess from "./components/ApplicationProcess";
 import Footer from '../../components/Footer';
+import Divider from "../../components/Divider";
 
 export default function Careers() {
   const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291126/careerBG_jikq5r.png'
@@ -32,9 +33,9 @@ export default function Careers() {
         />
       </header>
 
-      <div className="flex flex-col gap-[60px] lg:gap-[80px] w-[90%] mx-auto mt-[100px]">
-        <session data-aos="fade-up">
-          <h2 className="text-xs md:text-sm font-[poppins] text-[#030B1E]">
+      <div className="flex flex-col gap-[60px] lg:gap-[80px] w-[90%] md:w-[80%] mx-auto mt-[50px] lg:mt-[100px]">
+        <session data-aos="fade-up" className="lg:px-[50px]">
+          <h2 className="text-xs md:text-base font-[poppins] text-[#030B1E]">
             We are a passionate group of companies dedicated to providing
             innovative and sustainable solutions for the packaging, plastic
             waste management, and aluminium industries. We believe in the power
@@ -46,10 +47,10 @@ export default function Careers() {
         {/**Why Choose Reinnova section */}
         <session data-aos="fade-up" className="flex flex-col gap-8">
           <h2 className="text-sm md:text-xl text-center font-semibold text-[#016E97] font-[poppins]">
-            Why Choose a Career with Reinnova Green Holding Company?
+          Why Choose a Career with RGHC?
           </h2>
           <div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:items-start "
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center  "
             data-aos="fade-up"
           >
             <div>
@@ -148,7 +149,13 @@ export default function Careers() {
           <ApplicationProcess />
         </session>
 
-        <session data-aos="fade-up" className='mb-6'>
+        {/* Divider */}
+        <session className="w-[96%] lg:w-[80%] mx-auto">
+          <Divider />
+        </session>
+
+
+        <session data-aos="fade-up" className='mb-6 w-[96%] lg:w-[80%] mx-auto'>
           <h2 className="text-sm md:text-xl text-center font-semibold text-[#016E97] font-[poppins] mb-4">Join Us and Make a Difference!</h2>
           <p className="text-xs md:text-sm font-[poppins] text-[#030B1E]">
             We are excited to hear from talented individuals who share our

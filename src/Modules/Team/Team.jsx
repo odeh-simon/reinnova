@@ -26,81 +26,81 @@ export default function Team() {
 
         </header>
 
-        <main className="md:px-4 mt-[100px] w-[90%] mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <main className="md:px-4 mt-[100px] w-[90%] lg:w-[85%] mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-[40px]">
                 <TeamCard 
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681333/tosa_oaa7mn.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029975/tosa_xzrh29.png"
                     name="TOSA OGBOMO"
                     role="MD/GROUP CEO , REINNOVA GREEN HOLDINGS LIMITED "
                 />
 
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681333/mbonu_smriok.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029964/mbonu_cvneti.png"
                     name="DR OKECHUKWU N MBONU"
                     role="CHAIRMAN, BOARD OF DIRECTORS"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681333/calistus_pvssk7.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029952/calistus_tygxnx.png"
                     name="MR. CALLISTUS UDALOR"
                     role="MEMBER, BOARD OF DIRECTORS"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681333/julia_njt99s.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029962/julia_houdz6.png"
                     name="Julia Oku Jacks"
                     role="MEMBER, BOARD OF DIRECTORS"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681333/segun_rahnto.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029971/segun_zwfx54.png"
                     name="SEGUN ONAKOMAIYA"
                     role="SYNERGY CAPITAL INVESTMENTS"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681332/iredia_u6dzzu.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029960/iredia_uxjtrz.png"
                     name="Isorae Iredia Christopher"
-                    role="HEAD TECHNICAL PROJECTS, REINNOVA GREEN ECOPLAST "
+                    role="HEAD TECHNICAL PROJECTS, REINNOVA GREEN ECOPLAST"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681332/olowo_ixqc8a.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029967/olowo_jnbhf6.png"
                     name="Olowo Idowu Daniel"
                     role="Laminate Production Manager, ReInnova Green Packaging"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1744064981/fred_k3yrf9.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029958/fred_fzmajb.png"
                     name="FREDERICK FAWOHUNRE"
                     role="Head of Production AND MAINTENANCE , ReInnova Green Holdings"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1744064981/tosan_ht1ktp.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029977/uzoma_ve2fl5.png"
                     name="Mbaegbu Tosan Uzoma"
                     role="Commercial Manager, ReInnova Green Ecoplast"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1744064981/faith_x2gwvp.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029954/faith_fu7oh9.png"
                     name="Faith Aibor"
                     role="Group Head Procurement and Administration - Reinnova Green Holdings"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1744064981/fatima_rlride.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029956/fatima_dfd4fo.png"
                     name="Shittu Fatimah Bolanle"
                     role="Finance Business Partner, Reinnova Green Holdings"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681334/soba_akrwuf.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029973/soba_wb2o8y.png"
                     name="Soba Fubara- Abraham"
                     role="Chief Operating Officer- ReInnova Green Ecoplast"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681332/peter_tlupne.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029969/peter_bthhy2.png"
                     name="Peter Akinbola"
                     role="Group Head Maintenance - Reinnova Green Holdings."
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681332/adewale_tvhrhp.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029950/adewale_xa4amk.png"
                     name="ADEWALE AJITERU"
                     role="MAINTENANCE HEAD, Reinnova Green PACKAGING"
                 />
                 <TeamCard
-                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1743681332/andrew_yrwket.png"
+                    imageSrc="https://res.cloudinary.com/dsnz8adqi/image/upload/v1746029951/andrew_qbsumm.png"
                     name="Andrew Ugbo"
                     role="aluminium production Manager, Reinnova Green packaging"
                 />
