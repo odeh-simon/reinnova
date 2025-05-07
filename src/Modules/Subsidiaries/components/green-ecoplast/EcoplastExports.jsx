@@ -16,6 +16,10 @@ const packOfCans =
   "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292857/pack-of-cans_hdl2e5.png";
 const spoons =
   "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292860/spoons_ui0gne.png";
+const qualityControl =
+  "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746630467/quality-control_mrrewb.png";
+const repurposing =
+  "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746630467/repurposing_r3w03f.png";
 
 export const CommitmentToQuality = () => {
   const processingPower =
@@ -28,16 +32,19 @@ export const CommitmentToQuality = () => {
   return (
     <>
       <div className="flex flex-col gap-4">
-        <div className="w-[90%] lg:w-[80%] mx-auto">
+        <div className="w-[90%] lg:w-[70%] mx-auto">
           <h2 className="text-center text-[#016E97] mb-6 font-[poppins] font-semibold text-[16px] md:text-[30px]">
             Commitment to Quality
           </h2>
           <p className="text-[#35383F] font-[poppins] text-sm md:text-base md:leading-[40px]">
             Strict quality checks are conducted at every step of our process,
-            ensuring that <span className="font-medium">only the finest pellets and flakes</span> reach our clients.
-            Whether for <strong>local use or export,</strong> our products drive sustainability
-            while supporting industries in creating eco-friendly packaging
-            solutions.
+            ensuring that{" "}
+            <span className="font-medium">
+              only the finest pellets and flakes
+            </span>{" "}
+            reach our clients. Whether for <strong>local use or export,</strong>{" "}
+            our products drive sustainability while supporting industries in
+            creating eco-friendly packaging solutions.
           </p>
         </div>
 
@@ -59,7 +66,6 @@ export const CommitmentToQuality = () => {
               imageSrc={technology}
               description="Our advanced polymer sorter ensures purity by removing all impurities, guaranteeing premium quality."
             />
-          
           </div>
         </session>
       </div>
@@ -82,22 +88,22 @@ export const RecyclingProducts = () => {
         </h2>
 
         {/**Image Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] lg:gap-12">
           <RecyclingCard
             header="PET Flakes"
             imageSrc={petFlakes}
             description="We produce premium packaging solutions specifically designed for cleaning products. Our packaging is recognized for its strength, resistance to moisture, and sleek design, ensuring your products stand out on the shelves."
-            />
+          />
           <RecyclingCard
             header="PP/PE"
             imageSrc={pp}
             description="We provide a wide selection of plastic kitchen products, including durable spoons, colorful plates, and versatile cups, perfect for everyday use. Our items are designed for convenience and are lightweight."
-            />
+          />
           <RecyclingCard
             header="LDPE/HDPE"
             imageSrc={ldpe}
             description="We recognize that each home has its own distinct style and needs. Our team is committed to collaborating with clients to create tailored plastic solutions, including chairs, tables, and food flasks, that perfectly fit their lifestyle."
-            />
+          />
         </div>
       </div>
     </>
@@ -179,10 +185,25 @@ export const RecyclingProcess = () => {
               steps="5:"
               headerText="Quality Control"
               bgColor="#FAFEFF"
-              imageSrc={glasses}
+              imageSrc={qualityControl}
               imageWidth="w-full"
               imageHeight="h-auto"
               imageCaption="The reprocessed plastic flakes and pellets undergo stringent quality control checks to ensure they meet our high standards."
+              captionAlign="text-left"
+              headerAlign="text-left"
+            />
+          </div>
+
+          {/* Card 6 */}
+          <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 h-[400px]">
+            <Card
+              steps="6:"
+              headerText="Repurposing/Reintroduction"
+              bgColor="#FAFEFF"
+              imageSrc={repurposing}
+              imageWidth="w-full"
+              imageHeight="h-auto"
+              imageCaption="The high quality recycled plastic is then ready to be used in the production of new plastic products, reducing reliance on virgin plastic."
               captionAlign="text-left"
               headerAlign="text-left"
             />

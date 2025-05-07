@@ -37,11 +37,11 @@ export default function FirstAluminium() {
 
       <main className="w-full flex flex-col gap-[40px] md:gap-[80px] mt-[50px] lg:mt-[100px]">
         {/**About Reinnova Green Packaging */}
-        <section className="flex flex-col gap-5 w-[90%] lg:w-[80%] lg:px-[50px] mx-auto" data-aos="fade-up">
-          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px]">
+        <section className="flex flex-col gap-5 w-[90%] lg:w-[75%] lg:px-[50px] mx-auto" data-aos="fade-up">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px]">
             About First Aluminium Nigeria Limited
           </h2>
-          <div className="flex flex-col gap-3 lg:py-10 md:px-12 bg-white md:shadow-custom-gray">
+          <div className="flex flex-col gap-3 lg:py-10 md:px-12 bg-white shadow-custom-gray">
             <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
               First Aluminium Nigeria, formerly known as{" "}
               <strong>Aluminium City (Alucity),</strong>

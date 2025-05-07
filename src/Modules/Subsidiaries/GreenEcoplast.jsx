@@ -28,7 +28,7 @@ export default function GreenEcoplast() {
           showHomeButtons={false}
           showSubscribeButton={false}
           backgroundImage={backgroundImage}
-          headerText="Reinnova Green Ecoplast"
+          headerText="ReInnova Green Ecoplast"
           middleText="Leading the Future of Sustainable Packaging"
           descriptionText="Sustainable Plastic Recycling Solutions for a Greener Nigeria"
         />
@@ -36,11 +36,11 @@ export default function GreenEcoplast() {
 
       <main className="w-full flex flex-col gap-[40px] md:gap-[80px] mt-[50px] lg:mt-[80px]">
         {/**About Reinnova Green Packaging */}
-        <section className="flex flex-col gap-5 w-[90%] lg:w-[80%] mx-auto" data-aos="fade-up">
-          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px] lg:mb-8">
+        <section className="flex flex-col gap-5 w-[90%] lg:w-[60%] mx-auto" data-aos="fade-up">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] mb-6 lg:mb-8">
             About Us - Reinnova Green Ecoplast
           </h2>
-          <div className=" py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 md:rounded-r-[40px] bg-white md:shadow-custom md:mb-6">
+          <div className=" py-4 px-6 lg:px-[100px] lg:py-[50px] flex flex-col gap-3 md:rounded-r-[40px] bg-white shadow-custom md:mb-6">
             <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
               Nigeria generates over 2.5 million tonnes of plastic waste
               annually, with a growing population of over 220 million people.

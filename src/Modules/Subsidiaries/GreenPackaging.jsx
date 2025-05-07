@@ -9,7 +9,7 @@ import Divider from "../../components/Divider";
 
 export default function GreenPackaging() {
   const backgroundImage =
-    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1745968450/greenpackageBG_vb4lyy.png";
+    "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746638441/greenpackageBG_vb4lyy.png";
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,18 +24,20 @@ export default function GreenPackaging() {
           showHomeButtons={false}
           showSubscribeButton={false}
           backgroundImage={backgroundImage}
-          headerText="Reinnova Green Packaging"
+          headerText="ReInnova Green Packaging"
           middleText="High-Quality, Sustainable Tube Packaging"
+          descriptionText='"Trusted by Industry Leaders!"'
+          enableBackgroundZoom={false}
         />
       </header>
 
       <main className="w-full flex flex-col gap-[40px] md:gap-[60px] mt-[50px] lg:mt-[100px]">
         {/**About Reinnova Green Packaging */}
         <section
-          className="w-[90%] lg:w-[80%] lg:px-[100px] mx-auto flex flex-col gap-5"
+          className="w-[90%] lg:w-[70%] lg:px-[100px] mx-auto flex flex-col gap-5"
           data-aos="fade-up"
         >
-          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] lg:text-[40px]">
+          <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px] ">
             About Us - Reinnova Green Packaging
           </h2>
           <p className="text-[#35383F] font-[poppins] text-sm leading-[32px]">

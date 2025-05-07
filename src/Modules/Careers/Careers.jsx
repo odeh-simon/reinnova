@@ -23,6 +23,7 @@ export default function Careers() {
         <NavBar />
         <Header
           showBouncingArrow={true}
+          bouncingArrowColor="blue"
           showHomeButtons={false}
           textColor="text-[#016E97]"
           showSubscribeButton={false}
@@ -46,7 +47,7 @@ export default function Careers() {
 
         {/**Why Choose Reinnova section */}
         <session data-aos="fade-up" className="flex flex-col gap-8">
-          <h2 className="text-sm md:text-xl text-center font-semibold text-[#016E97] font-[poppins]">
+          <h2 className="text-sm md:text-[30px] text-center font-semibold text-[#016E97] font-[poppins]">
           Why Choose a Career with RGHC?
           </h2>
           <div
@@ -54,38 +55,38 @@ export default function Careers() {
             data-aos="fade-up"
           >
             <div>
-              <img src={engineer1} alt="person with a hand machine" />
+              <img src={engineer1} alt="person with a hand machine"/>
             </div>
 
             <div>
-              <ul className="list-disc px-3 space-y-2 text-gray-700">
-                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[16px]">
+              <ul className="list-disc px-3 space-y-4 text-gray-700">
+                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[14px]">
                   <strong>Make a Positive Impact: </strong>Be part of a company
                   that is driving positive environmental change. Your work will
                   contribute to reducing waste, promoting resource conservation,
                   and creating a more sustainable future for generations to
                   come.
                 </li>
-                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[16px]">
+                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[14px]">
                   <strong> Work with Cutting-Edge Technologies:</strong> : We
                   invest in the latest technologies to advance our sustainable
                   solutions. You&apos;ll have the opportunity to work with
                   innovative equipment and processes at the forefront of the
                   industry.
                 </li>
-                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[16px]">
+                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[14px]">
                   <strong>Collaborative and Dynamic Environment:</strong> We
                   foster a collaborative and dynamic work environment where you
                   can learn, grow, and contribute your ideas. We encourage
                   teamwork and celebrate individual achievements.
                 </li>
-                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[16px]">
+                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[14px]">
                   <strong>Growth and Development Opportunities:</strong> We are
                   committed to the professional development of our employees. We
                   offer comprehensive training programs, mentorship
                   opportunities, and support for career advancement.
                 </li>
-                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[16px]">
+                <li className="text-[#030B1E] font-[poppins] text-xs xl:text-[14px]">
                   <strong>Competitive Compensation and Benefits:</strong> We
                   offer competitive salaries, benefits packages, and a work
                   environment that values your well-being.
@@ -102,31 +103,31 @@ export default function Careers() {
 
         {/**What we look for in our Candidates section*/}
         <session data-aos="fade-up">
-          <h2 className="text-sm md:text-xl text-center font-semibold text-[#016E97] font-[poppins] mb-4">
+          <h2 className="text-sm md:text-[30px] text-center font-semibold text-[#016E97] font-[poppins] mb-4">
             What We Look For in Our Candidates
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-6">
               <ul className="list-disc list-inside flex flex-col gap-2">
-                <li className="text-[#030B1E] text-xs xl:text-sm font-[poppins] xl:leading-[170.6%]">
+                <li className="text-[#030B1E] text-xs lg:text-sm xl:text-base font-[poppins] xl:leading-[170.6%]">
                   A strong work ethic and a commitment to excellence
                 </li>
-                <li className="text-[#030B1E] text-xs xl:text-sm font-[poppins] xl:leading-[170.6%]">
+                <li className="text-[#030B1E] text-xs lg:text-sm xl:text-base font-[poppins] xl:leading-[170.6%]">
                   A passion for sustainability and environmental responsibility
                 </li>
-                <li className="text-[#030B1E] text-xs xl:text-sm font-[poppins] xl:leading-[170.6%]">
+                <li className="text-[#030B1E] text-xs lg:text-sm xl:text-base font-[poppins] xl:leading-[170.6%]">
                   Strong technical skills and knowledge relevant to the specific
                   role
                 </li>
-                <li className="text-[#030B1E] text-xs xl:text-sm font-[poppins] xl:leading-[170.6%]">
+                <li className="text-[#030B1E] text-xs lg:text-sm xl:text-base font-[poppins] xl:leading-[170.6%]">
                   Excellent communication, collaboration, and problem-solving
                   skills
                 </li>
-                <li className="text-[#030B1E] text-xs xl:text-sm font-[poppins] xl:leading-[170.6%]">
+                <li className="text-[#030B1E] text-xs lg:text-sm xl:text-base font-[poppins] xl:leading-[170.6%]">
                   A willingness to learn and adapt to new technologies and
                   processes
                 </li>
-                <li className="text-[#030B1E] text-xs xl:text-sm font-[poppins] xl:leading-[170.6%]">
+                <li className="text-[#030B1E] text-xs lg:text-sm xl:text-base font-[poppins] xl:leading-[170.6%]">
                   A team player with a positive and proactive attitude
                 </li>
               </ul>

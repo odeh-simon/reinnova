@@ -22,7 +22,7 @@ export default function JobOpenings() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-sm md:text-xl text-center font-semibold text-[#016E97] font-[poppins]">
+      <h2 className="text-sm md:text-[30px] text-center font-semibold text-[#016E97] font-[poppins]">
         Our Current Openings
       </h2>
       <p className="text-xs md:text-sm font-[poppins] text-[#030B1E] lg:px-[100px]">

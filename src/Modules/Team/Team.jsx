@@ -5,8 +5,8 @@ import TeamCard from "./components/TeamCard";
 import { useEffect } from "react";
 
 export default function Team() {
-    const backgroundImage ='https://res.cloudinary.com/dsnz8adqi/image/upload/v1739290570/bg_zq3nvc.png'
-      // Scroll to top on component mount
+    const backgroundImage = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739291126/careerBG_jikq5r.png'
+    // Scroll to top on component mount
       useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
@@ -15,10 +15,11 @@ export default function Team() {
         <header>
             <NavBar />
             <Header 
-                headerText="The Reinnova Team"
+                headerText="The ReInnova Team"
                 middleText="Meet the inspiring leaders and dedicated team members at Reinnova Green."
                 showSubscribeButton={false}
                 showBouncingArrow={true}
+                bouncingArrowColor="blue"
                 showHomeButtons={false}
                 textColor='text-[#016E97]'
                 backgroundImage={backgroundImage}

@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import arrow from "../assets/icons/arrow-right.svg";
-import arrowDown from "../assets/icons/arrow-down.svg";
+import arrowDownWhite from "../assets/icons/arrow-down.svg"; // Default white arrow
+import arrowDownBlue from "../assets/icons/blue-arrow-down.svg"; // Optional blue arrow
 
 const Header = ({
   headerText = "",
@@ -12,7 +13,9 @@ const Header = ({
   showHomeButtons = true,
   backgroundImage,
   showBouncingArrow = true,
+  bouncingArrowColor = "white",
   textColor = "text-white",
+  enableBackgroundZoom = true, // New prop to control background zoom
 }) => {
   const [showContent, setShowContent] = useState(false);
   const [zoomBackground, setZoomBackground] = useState(false);
@@ -23,10 +26,13 @@ const Header = ({
       setShowContent(true);
     }, 500);
 
-    // Trigger background zoom-in
-    const zoomTimer = setTimeout(() => {
-      setZoomBackground(true);
-    }, 1000);
+    // Trigger background zoom-in only if enableBackgroundZoom is true
+    let zoomTimer;
+    if (enableBackgroundZoom) {
+      zoomTimer = setTimeout(() => {
+        setZoomBackground(true);
+      }, 1000);
+    }
 
     // Check if the script has already been appended
     const existingScript = document.querySelector('script[data-uid="77f3d4dfec"]');
@@ -43,12 +49,17 @@ const Header = ({
     // Cleanup
     return () => {
       clearTimeout(contentTimer);
-      clearTimeout(zoomTimer);
+      if (zoomTimer) {
+        clearTimeout(zoomTimer);
+      }
       if (existingScript) {
         existingScript.remove();
       }
     };
-  }, []);
+  }, [enableBackgroundZoom]); // Add enableBackgroundZoom to dependency array
+
+  // Determine the arrow image based on the `bouncingArrowColor` prop
+  const arrowDown = bouncingArrowColor === "blue" ? arrowDownBlue : arrowDownWhite;
 
   return (
     <div
@@ -77,7 +88,7 @@ const Header = ({
           }
 
           .slide-up {
-            animation: slideUp 0.5s ease-out forwards;
+            animation: slideUp 1s ease-out forwards;
           }
 
           .zoom-in {
@@ -88,7 +99,7 @@ const Header = ({
 
       {/* Background Image Layer */}
       <div
-        className={`absolute inset-0 ${zoomBackground ? "zoom-in" : ""}`}
+        className={`absolute inset-0 ${zoomBackground && enableBackgroundZoom ? "zoom-in" : ""}`}
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
@@ -98,7 +109,7 @@ const Header = ({
 
       {/* Content Layer */}
       <div
-        className={`relative z-10 flex flex-col items-center justify-center w-full ${
+        className={` z-10 flex flex-col items-center justify-center w-full ${
           showContent ? "slide-up" : "opacity-0"
         }`}
       >
@@ -150,7 +161,7 @@ const Header = ({
 
         {/* Optional Downward Arrow */}
         {showBouncingArrow && (
-          <div className="mt-8 animate-bounce justify-end absolute -bottom-10">
+          <div className="animate-bounce justify-end absolute -bottom-20">
             <img src={arrowDown} alt="scroll down" className="h-4 w-10" />
           </div>
         )}
@@ -168,6 +179,8 @@ Header.propTypes = {
   showHomeButtons: PropTypes.bool,
   backgroundImage: PropTypes.string.isRequired,
   showBouncingArrow: PropTypes.bool,
+  bouncingArrowColor: PropTypes.oneOf(["white", "blue"]),
+  enableBackgroundZoom: PropTypes.bool, // New prop for background zoom control
 };
 
 export default Header;

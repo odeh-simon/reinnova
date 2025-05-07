@@ -21,7 +21,7 @@ export const AluminiumProducts = () => {
   return (
     <>
       <div>
-        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px]">
+        <h2 className="text-center text-[#016E97] font-[poppins] font-semibold mb-6 text-[16px] md:text-[30px]">
           Our Aluminium Products
         </h2>
 
@@ -100,6 +100,41 @@ export const AluminiumProcess = () => {
               step="4:"
               headerText="Annealing (softening)"
               bodyText="Work-hardened tubes pass through a continuous oven and slow-cool to restore ductility, making the walls collapsible and ready for further forming."
+            />
+          </div>
+          <div className="flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 pr-4">
+            <ProcessCard
+              step="5:"
+              headerText="First Coat"
+              bodyText="Annealed tubes are then given a light conversion coating (Base coating) to improve paint and lacquer adhesion while minimizing particulate contamination."
+            />
+          </div>
+          <div className="flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 pr-4">
+            <ProcessCard
+              step="6:"
+              headerText="Internal Lacquering"
+              bodyText="A lacquer is spray-applied inside the tube to isolate product from bare metal, then oven-cured. Multiple passes ensure full coverage of the shoulder and neck."
+            />
+          </div>
+          <div className="flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 pr-4">
+            <ProcessCard
+              step="7:"
+              headerText="Base-coat Application"
+              bodyText="Externally, a white (or customer-specified) base coat is sprayed or roller-coated and cured, creating an even background for graphics."
+            />
+          </div>
+          <div className="flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 pr-4">
+            <ProcessCard
+              step="8:"
+              headerText="Offset Printing"
+              bodyText="Up to 6-colour dry-offset presses transfer inks from plates to rubber blankets and then to the rotating tube, allowing 360° high‑resolution graphics, text and regulatory codes in a single pass."
+            />
+          </div>
+          <div className="flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 pr-4">
+            <ProcessCard
+              step="9:"
+              headerText="Over-varnish & Final Curing"
+              bodyText="A clear protective varnish is applied for gloss and abrasion resistance, followed by a final bake that also drives off residual solvents."
             />
           </div>
         </div>

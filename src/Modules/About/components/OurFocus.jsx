@@ -1,7 +1,7 @@
 
 const OurFocus = () => {
   return (
-    <div className="bg-[#17759A] p-6 rounded-[10px] w-fit md:w-[600px] flex flex-col gap-[48px] font-[poppins] text-sm lg:text-base font-medium md:font-semibold text-white">
+    <div className="bg-[#17759A] p-6 rounded-[10px] w-fit md:w-[400px] flex flex-col gap-[48px] font-[poppins] text-sm lg:text-base font-medium md:font-semibold text-white">
       <div className="flex flex-col gap-3">
         <p>
           Expanding our recycling capacity to significantly reduce plastic waste

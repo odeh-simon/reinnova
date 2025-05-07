@@ -35,7 +35,7 @@ export default function About() {
       </header>
 
       <main className="px-4 md:px-10 py-[50px] lg:py-[100px] bg-[#EFF8FA]">
-        <div className="flex flex-col gap-[50px] lg:gap-[100px] w-full lg:w-[80%] mx-auto">
+        <div className="flex flex-col gap-[50px] lg:gap-[100px] w-full lg:w-[70%] mx-auto">
           <div
             className="px-6 py-4 lg:px-[100px] lg:py-[50px] flex flex-col gap-6 rounded-[28px] bg-white shadow-custom"
             data-aos="fade-up"
@@ -127,6 +127,7 @@ export default function About() {
       </main>
       {/* Second container section */}
       <section className="flex flex-col gap-10 lg:gap-[100px]">
+
         <section className="flex flex-col gap-6 lg:gap-[100px]  w-full">
           <div
             data-aos="fade-up"
@@ -153,7 +154,7 @@ export default function About() {
                   </strong>
                 </p>
               </div>
-              <div className="flex flex-col md:flex-row gap-4 md:gap-[40px] items-start md:pl-[40px] mt-12">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-[40px] md:w-[90%] mx-auto items-start mt-12">
                 <p className="text-white font-[poppins] text-sm md:text-lg">
                   We are focused on:
                 </p>

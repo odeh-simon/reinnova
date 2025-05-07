@@ -7,7 +7,7 @@ export const PackagingProduct = () => {
   const watermarkBG = 'https://res.cloudinary.com/dsnz8adqi/image/upload/v1739292675/watermarkBG_asqyuf.png'
 
     return (
-      <div className=" w-full px-6 lg:px-[100px] flex flex-col gap-6 mt-14 py-8 bg-center bg-cover" style={{backgroundImage: `url(${watermarkBG})`}}>
+      <div className=" w-full px-6 py-12 lg:px-[100px] flex flex-col gap-6 mt-14 py-8 bg-center bg-cover" style={{backgroundImage: `url(${watermarkBG})`}}>
         {/* the Subsidiaries Card content goes here */}
         <div className="flex flex-col gap-1">
           <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px]">
@@ -27,6 +27,7 @@ export const PackagingProduct = () => {
             imageHeight="h-[auto]"
             imageCaption="Durable, high-quality and eco-friendly Laminate Tubes available in a variety of sizes and designs to suit your unique requirements."
             captionAlign="text-left"
+            headerAlign='text-left'
           />
           <Card
             bgColor="bg-[#FAFEFF]"
@@ -36,6 +37,7 @@ export const PackagingProduct = () => {
             imageHeight="h-[auto]"
             imageCaption="Aluminium Tubes thoughtfully crafted in a wide array of shapes, sizes, and finishes, ensuring they meet the diverse needs of your cosmetic products."
             captionAlign="text-left"
+            headerAlign='text-left'
           />
           <Card
             bgColor="bg-[#FAFEFF]"
@@ -45,6 +47,7 @@ export const PackagingProduct = () => {
             imageHeight="h-[auto]"
             imageCaption="High-barrier and tamper-evident featured Seamless Tubes designed to guarantee the safety and quality of your pharmaceutical products."
             captionAlign="text-left"
+            headerAlign='text-left'
           />
         </div>
       </div>

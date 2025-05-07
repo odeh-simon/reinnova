@@ -9,7 +9,7 @@ const CommitmentCard = ({ header, imageSrc, description }) => {
         </h2>
       </div>
       <div className="flex items-center justify-center ">
-        <img className="w-[300px] h-[200px]" src={imageSrc} alt={header} />
+        <img className="w-[232px] h-[227px]" src={imageSrc} alt={header} />
       </div>
       <p className="font-[poppins] text-[#030B1E] text-sm md:text-lg">{description}</p>
     </div>
