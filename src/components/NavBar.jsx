@@ -223,7 +223,7 @@ function NavBar() {
                       : "border-transparent"
                   } `}
                 >
-                  <Link to="/career">Carrer</Link>
+                  <Link to="/career">Career</Link>
                 </li>
              
               </ul>
