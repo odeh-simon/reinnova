@@ -41,7 +41,7 @@ export default function FirstAluminium() {
           <h2 className="text-center text-[#016E97] font-[poppins] font-semibold text-[16px] md:text-[30px]">
             About First Aluminium Nigeria Limited
           </h2>
-          <div className="flex flex-col gap-3 lg:py-10 md:px-12 bg-white shadow-custom-gray">
+          <div className="flex flex-col gap-3 lg:py-10 py-6 px-4 md:px-12 bg-white shadow-custom-gray">
             <p className="text-[#35383F] font-[poppins] text-sm md:text-[16px] leading-[32px]">
               First Aluminium Nigeria, formerly known as{" "}
               <strong>Aluminium City (Alucity),</strong>
