@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import arrow from "../../../assets/icons/arrow-right.svg";
+const defaultBGMobile = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1747156238/bg_zcm0wm.png";
 const defaultBG = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746491095/homebg_vynxay.png";
 const backgroundImage1 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1739295462/homeBG_kkqhtw.png";
 const backgroundImage2 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746639650/homeBG2_s7ix7i.png";
@@ -10,11 +11,12 @@ const backgroundImage5 = "https://res.cloudinary.com/dsnz8adqi/image/upload/v173
 const plasticIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021091/recycling-plastic_dqca2h.svg";
 const tubeIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021091/tube_ek40uj.svg";
 const aluminiumIcon = "https://res.cloudinary.com/dsnz8adqi/image/upload/v1746021087/aluminium_azdy6q.svg";
+
 const HeaderSlide = () => {
   const slidesData = [
     {
       middleText: "",
-      backgroundImage: defaultBG,
+      // We'll handle backgroundImage for this slide in the render logic
       showButtons: false,
     },
     {
@@ -82,6 +84,15 @@ const HeaderSlide = () => {
   const [showContent, setShowContent] = useState(false);
   const [zoomBackground, setZoomBackground] = useState(false);
 
+  // Track window width for responsive background
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     setIsSliding(true);
     setShowContent(false);
@@ -109,6 +120,12 @@ const HeaderSlide = () => {
 
   const handleNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
+  };
+
+  // Helper to get responsive background for the first slide
+  const getFirstSlideBackground = () => {
+    // Tailwind's md breakpoint is 768px
+    return windowWidth < 768 ? defaultBGMobile : defaultBG;
   };
 
   return (
@@ -158,90 +175,98 @@ const HeaderSlide = () => {
         `}
       </style>
       <div className="relative w-full h-full">
-        {slidesData.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            } ${index === currentSlide && isSliding ? "slide-in" : ""}`}
-            style={{
-              backgroundImage: `url(${slide.backgroundImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "bottom",
-            }}
-          >
+        {slidesData.map((slide, index) => {
+          // For the first slide, use responsive background
+          const isFirst = index === 0;
+          const backgroundImage = isFirst
+            ? getFirstSlideBackground()
+            : slide.backgroundImage;
+
+          return (
             <div
-              className={`absolute inset-0 ${
-                index === currentSlide && zoomBackground && index !== 0 ? "zoom-in" : ""
-              }`}
+              key={index}
+              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              } ${index === currentSlide && isSliding ? "slide-in" : ""}`}
               style={{
-                backgroundImage: `url(${slide.backgroundImage})`,
+                backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: "cover",
                 backgroundPosition: "bottom",
               }}
-            />
-            <div className="h-full flex flex-col lg:w-[70%] mx-auto items-center justify-center relative z-10">
+            >
               <div
-                className={`${
-                  index === currentSlide && showContent && slide.middleText
-                    ? "slide-up"
-                    : "opacity-0"
-                } text-center`}
-              >
-                {slide.icon && slide.iconText && (
-                  <div
-                    className="flex w-fit justify-center items-center gap-2 mb-3  mx-auto rounded-lg"
-                    style={{
-                      backgroundColor: slide.iconBackground || "transparent", // Dynamic background color
-                      border: slide.iconBorder || "none", // Dynamic border
-                      padding: slide.padding || "0px",
-                    }}
-                  >
-                    <div className="w-14 h-14" style={{backgroundColor: slide.sectionBackground || "transparent" }}>
-                      <img src={slide.icon} alt="icon" className="w-full h-full object-cover" />
-                    </div>
-                    <p
-                      className="text-xs md:text-lg font-[poppins] font-semibold"
+                className={`absolute inset-0 ${
+                  index === currentSlide && zoomBackground && index !== 0 ? "zoom-in" : ""
+                }`}
+                style={{
+                  backgroundImage: `url(${backgroundImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "bottom",
+                }}
+              />
+              <div className="h-full flex flex-col lg:w-[70%] mx-auto items-center justify-center relative z-10">
+                <div
+                  className={`${
+                    index === currentSlide && showContent && slide.middleText
+                      ? "slide-up"
+                      : "opacity-0"
+                  } text-center`}
+                >
+                  {slide.icon && slide.iconText && (
+                    <div
+                      className="flex w-fit justify-center items-center gap-2 mb-3  mx-auto rounded-lg"
                       style={{
-                        color: slide.iconTextColor || "#000", // Dynamic text color
-                        padding: slide.textPadding || "0px",
+                        backgroundColor: slide.iconBackground || "transparent", // Dynamic background color
+                        border: slide.iconBorder || "none", // Dynamic border
+                        padding: slide.padding || "0px",
                       }}
                     >
-                      {slide.iconText}
-                    </p>
-                  </div>
-                )}
-
-                <h1 className="text-base md:text-[40px] px-6 md:px-12 font-[RocknRollOne] text-center mb-3">
-                  {slide.middleText}
-                </h1>
-
-                {slide.showButtons !== false && (
-                  <div className="flex gap-3  items-center justify-center mt-4">
-                    <Link
-                      to="/contact-us"
-                      className="bg-white border-2 border-white text-[#0765A5] hover:text-blue-700 hover:text-base transition-all px-3 py-2 md:px-6 md:py-3 rounded-[10px] font-[poppins] font-medium text-sm"
-                    >
-                      Contact Us
-                    </Link>
-
-                    {slide.learnMoreLink && (
-                      <Link
-                        to={slide.learnMoreLink}
-                        className="bg-transparent border-2 border-white flex items-center px-3 py-2 md:px-6 md:py-3 rounded-[10px] gap-2"
+                      <div className="w-14 h-14" style={{backgroundColor: slide.sectionBackground || "transparent" }}>
+                        <img src={slide.icon} alt="icon" className="w-full h-full object-cover" />
+                      </div>
+                      <p
+                        className="text-xs md:text-lg font-[poppins] font-semibold"
+                        style={{
+                          color: slide.iconTextColor || "#000", // Dynamic text color
+                          padding: slide.textPadding || "0px",
+                        }}
                       >
-                        <span className="font-[poppins] font-medium text-sm hover:text-base transition-all">
-                          Learn More
-                        </span>
-                        <img src={arrow} alt="arrow" className="w-4 h-4" />
+                        {slide.iconText}
+                      </p>
+                    </div>
+                  )}
+
+                  <h1 className="text-base md:text-[40px] px-6 md:px-12 font-[RocknRollOne] text-center mb-3">
+                    {slide.middleText}
+                  </h1>
+
+                  {slide.showButtons !== false && (
+                    <div className="flex gap-3  items-center justify-center mt-4">
+                      <Link
+                        to="/contact-us"
+                        className="bg-white border-2 border-white text-[#0765A5] hover:text-blue-700 hover:text-base transition-all px-3 py-2 md:px-6 md:py-3 rounded-[10px] font-[poppins] font-medium text-sm"
+                      >
+                        Contact Us
                       </Link>
-                    )}
-                  </div>
-                )}
+
+                      {slide.learnMoreLink && (
+                        <Link
+                          to={slide.learnMoreLink}
+                          className="bg-transparent border-2 border-white flex items-center px-3 py-2 md:px-6 md:py-3 rounded-[10px] gap-2"
+                        >
+                          <span className="font-[poppins] font-medium text-sm hover:text-base transition-all">
+                            Learn More
+                          </span>
+                          <img src={arrow} alt="arrow" className="w-4 h-4" />
+                        </Link>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
